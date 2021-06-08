@@ -13,11 +13,16 @@ export default new Router({
       component: HelloWorld
     },
     {
+      path: '/home',
+      name: 'Home',
+      component: () => import('../components/home.vue')
+    },
+    {
       path: '/',
       component: CommonLayout,
       children: [
         {
-          path: '/home',
+          path: '/',
           name: 'Home',
           component: () => import('../components/home.vue')
         }
