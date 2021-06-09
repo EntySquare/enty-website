@@ -72,7 +72,7 @@
       </el-row>
       <el-row>
         <div>
-          <div style="height: 1720px; width: 100%; position: absolute;">
+          <div style="height: 1720px; width: 100%; position: absolute; z-index: -1">
             <el-image :src="require('../assets/background_green.png')"></el-image>
           </div>
           <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
@@ -278,12 +278,14 @@
             <div class="home-footer-subTitle">在无界的区块链世界持续精进，以前沿技术为全球客户提供价值。</div>
             <div>
               <div class="home-footer-text">联系我们</div>
-              <el-image :src="require('../assets/grayArrow.png')" style="width: 96px; height: 96px; margin-right: 200px; margin-top: -62px"></el-image>
+              <el-image :src="require('../assets/grayArrow.png')"
+                        style="width: 96px; height: 96px; margin-right: 200px; margin-top: -62px"></el-image>
             </div>
           </el-col>
           <el-col span="6" :push="4">
             <div>
-              <el-image :src="require('../assets/homeFooter.png')" style="width: 464px; height: 547px; margin-top: -157px"></el-image>
+              <el-image :src="require('../assets/homeFooter.png')"
+                        style="width: 464px; height: 547px; margin-top: -157px"></el-image>
             </div>
           </el-col>
         </el-row>
@@ -303,7 +305,8 @@ export default {
     scrollAnimation: function () {
       const currentY =
         document.documentElement.scrollTop || document.body.scrollTop
-      scrollAnimation(currentY, window.innerHeight)
+      // scrollAnimation(currentY, window.innerHeight)
+      scrollAnimation(currentY, 1080)
     }
   }
 }
