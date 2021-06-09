@@ -1,9 +1,7 @@
 <template>
   <el-container direction="vertical">
     <el-main style="margin: 0; padding: 0">
-      <div class="home-test"
-           style="background: linear-gradient(156deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%); opacity: 0.9;"
-           @scroll="scrollEvent($event)">
+      <div style="background: linear-gradient(156deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%); opacity: 0.9;" >
         <el-row type="flex" align="middle">
           <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
                   :xl="{span: 2, push: 1}">
@@ -298,10 +296,6 @@
 export default {
   name: 'Home',
   methods: {
-    scrollEvent (e) {
-      alert(111)
-      console.log(e.srcElement.scrollTop, e.target.scrollTop)
-    },
     scrollAnimation: function () {
       const currentY =
         document.documentElement.scrollTop || document.body.scrollTop
@@ -336,11 +330,6 @@ function scrollAnimation (currentY, targetY) {
 * {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
   Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-.home-test {
-  height: 100%;
-  overflow-y: scroll
 }
 
 .headTitle1 {
@@ -409,6 +398,7 @@ function scrollAnimation (currentY, targetY) {
   font-weight: 500;
   color: #000000;
   line-height: 80px;
+  text-align: left;
 }
 
 .bodyTitle4 {
