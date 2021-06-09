@@ -103,25 +103,34 @@
           <div class="bodyTitle3">技术和经验沉淀</div>
         </el-col>
       </el-row>
-      <el-row type="flex" justify="center" style="padding-top: 112px">
-        <el-col>
-          <el-image :src="require('../assets/advanIcon1.png')" style="width: 120px; height: 120px"></el-image>
-          <div class="advance-title" style="margin: 0 auto;">扩展性</div>
+      <el-row type="flex" style="padding-top: 112px">
+        <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
+                :xl="{span: 6, push: 11}">
+          <div style="text-align: left">
+            <el-image :src="require('../assets/advanIcon1.png')" style="width: 120px; height: 120px;"></el-image>
+          </div>
+          <div class="advance-title">扩展性</div>
           <div class="advance-text">基于BA*-VRF共识的POS高性能公链，匿名选举、交易Proof验证压缩并支持NFT合约扩展，让去中心化应用更加顺畅</div>
         </el-col>
       </el-row>
       <el-row style="width: 115px"></el-row>
-      <el-row type="flex" justify="center" style="padding-top: 112px">
-        <el-col>
-          <el-image :src="require('../assets/advanIcon2.png')" style="width: 120px; height: 120px"></el-image>
+      <el-row type="flex" style="padding-top: 112px">
+        <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
+                :xl="{span: 6, push: 11}">
+          <div style="text-align: left">
+            <el-image :src="require('../assets/advanIcon2.png')" style="width: 120px; height: 120px;"></el-image>
+          </div>
           <div class="advance-title" style="margin: 0 auto;">多样性</div>
           <div class="advance-text">构建全新金融应用、存储扩展、NFT去中心化执行、数字资产及用户语言聊天等多种应用场景</div>
         </el-col>
       </el-row>
       <el-row style="width: 115px"></el-row>
-      <el-row type="flex" justify="center" style="padding-top: 112px; padding-bottom: 180px">
-        <el-col>
-          <el-image :src="require('../assets/advanIcon3.png')" style="width: 120px; height: 120px"></el-image>
+      <el-row type="flex" style="padding-top: 112px; padding-bottom: 180px">
+        <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
+                :xl="{span: 6, push: 11}">
+          <div style="text-align: left">
+            <el-image :src="require('../assets/advanIcon3.png')" style="width: 120px; height: 120px;"></el-image>
+          </div>
           <div class="advance-title" style="margin: 0 auto;">安全性</div>
           <div class="advance-text">基于BA*-VRF的POS共识机制，在协议层增加了安全及攻击保护</div>
         </el-col>
@@ -445,19 +454,17 @@ function scrollAnimationTo (currentY, targetY) {
 }
 
 .advance-title {
-  width: 96px;
   height: 32px;
   font-size: 32px;
   font-weight: 500;
   color: #000000;
   line-height: 32px;
-  text-align: center;
+  text-align: left;
   margin: 0 auto;
   padding-top: 32px;
 }
 
 .advance-text {
-  width: 460px;
   height: 90px;
   font-size: 18px;
   font-weight: 500;
