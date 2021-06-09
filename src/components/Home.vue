@@ -1,8 +1,9 @@
 <template>
   <el-container direction="vertical">
     <el-main style="margin: 0; padding: 0">
-      <div style="background: linear-gradient(156deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%); opacity: 0.9;" >
-        <el-row type="flex" align="middle">
+      <div
+        style="width: 100%; background-color: #FFFFFF; position: fixed; z-index: 99">
+        <el-row type="flex" align="middle" v-show="menuShow" style="height: 96px">
           <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
                   :xl="{span: 2, push: 1}">
             <el-image :src="require('../assets/entyLogo.png')" style="height: 48px; width: 235px;"></el-image>
@@ -48,9 +49,9 @@
           </div>
         </el-col>
         <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
-                :xl="{span: 13, push: 4}">
-          <div style="height: 1066px; width: 1360px;">
-            <el-image :src="require('../assets/background.png')"></el-image>
+                :xl="{span: 13, push: 5}">
+          <div>
+            <el-image :src="require('../assets/background.png')" style="height: 100vh; width: 1360px;"></el-image>
           </div>
         </el-col>
       </el-row>
@@ -295,17 +296,33 @@
 <script>
 export default {
   name: 'Home',
+  data () {
+    return {
+      menuShow: false
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.scrollToTop)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.scrollToTop)
+  },
   methods: {
     scrollAnimation: function () {
-      const currentY =
-        document.documentElement.scrollTop || document.body.scrollTop
+      let currentY = document.documentElement.scrollTop || document.body.scrollTop
       // scrollAnimation(currentY, window.innerHeight)
-      scrollAnimation(currentY, 1080)
+      scrollAnimationTo(currentY, 1080)
+      this.menuShow = true
+    },
+    // 为了计算距离顶部的高度，当高度大于60显示回顶部图标，小于60则隐藏
+    scrollToTop () {
+      let currentY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      this.menuShow = currentY > 60
     }
   }
 }
 
-function scrollAnimation (currentY, targetY) {
+function scrollAnimationTo (currentY, targetY) {
   // 获取当前位置方法
   // const currentY = document.documentElement.scrollTop || document.body.scrollTop
   // 计算需要移动的距离
@@ -313,14 +330,14 @@ function scrollAnimation (currentY, targetY) {
   let _currentY = currentY
   setTimeout(() => {
     // 一次调用滑动帧数，每次调用会不一样
-    const dist = Math.ceil(needScrollTop / 40)
+    const dist = Math.ceil(needScrollTop / 50)
     _currentY += dist
-    window.scrollTo(_currentY, currentY)
+    window.scrollTo(0, currentY)
     // 如果移动幅度小于十个像素，直接移动，否则递归调用，实现动画效果
     if (needScrollTop > 1 || needScrollTop < -1) {
-      scrollAnimation(_currentY, targetY)
+      scrollAnimationTo(_currentY, targetY)
     } else {
-      window.scrollTo(_currentY, targetY)
+      window.scrollTo(0, targetY)
     }
   }, 1)
 }
@@ -330,6 +347,11 @@ function scrollAnimation (currentY, targetY) {
 * {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
   Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.headFont {
+  color: #000000;
+  white-space: nowrap;
 }
 
 .headTitle1 {

@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
 .headFont {
-  color: black;
+  color: white;
   white-space: nowrap;
 }
 </style>
