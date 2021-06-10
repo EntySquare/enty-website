@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '../components/HelloWorld'
 import CommonLayout from '../layouts/CommonLayout'
+import coinMining from '../components/coinMining'
 
 Vue.use(Router)
 
@@ -20,6 +21,11 @@ export default new Router({
           path: '/home',
           name: 'Home',
           component: () => import('../components/home.vue')
+        },
+        {
+          path: '/coinMining',
+          name: 'coinMining',
+          component: coinMining
         }
       ]
     }]
