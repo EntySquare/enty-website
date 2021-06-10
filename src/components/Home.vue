@@ -282,19 +282,19 @@
           </el-col>
         </el-row>
         <el-row>
-          <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"
+          <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 1}" :lg="{span: 5, push: 2}"
                   :xl="{span: 4, push: 4}">
             <el-image :src="require('../assets/cooperation1.png')" class="cooperation-icon"></el-image>
           </el-col>
-          <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"
+          <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 1}" :lg="{span: 5, push: 2}"
                   :xl="{span: 4, push: 4}">
             <el-image :src="require('../assets/cooperation2.png')" class="cooperation-icon"></el-image>
           </el-col>
-          <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"
+          <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 1}" :lg="{span: 5, push: 2}"
                   :xl="{span: 4, push: 4}">
             <el-image :src="require('../assets/cooperation3.png')" class="cooperation-icon"></el-image>
           </el-col>
-          <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"
+          <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 1}" :lg="{span: 5, push: 2}"
                   :xl="{span: 4, push: 4}">
             <el-image :src="require('../assets/cooperation4.png')" class="cooperation-icon"></el-image>
           </el-col>
@@ -314,7 +314,7 @@
               </span>
             </div>
           </el-col>
-          <el-col :xs="{span: 20, push: 4}" :sm="{span: 7, push: 5}" :md="{span: 7, push: 7}" :lg="{span: 6, push: 10}"
+          <el-col :xs="{span: 20, push: 4}" :sm="{span: 7, push: 5}" :md="{span: 7, push: 5}" :lg="{span: 6, push: 10}"
                   :xl="{span: 6, push: 8}">
             <div class="home-footer-image">
               <el-image :src="require('../assets/homeFooter.png')"></el-image>
@@ -1234,8 +1234,8 @@ function scrollAnimationTo (currentY, targetY) {
     cursor: pointer;
   }
   .cooperation-icon {
-    width: 198px;
-    height: 138px
+    width: 246px;
+    height: 146px
   }
   .home-footer-size {
     height: 493px;
@@ -1531,8 +1531,8 @@ function scrollAnimationTo (currentY, targetY) {
     cursor: pointer;
   }
   .cooperation-icon {
-    width: 198px;
-    height: 138px
+    width: 296px;
+    height: 176px
   }
   .home-footer-size {
     height: 493px;
