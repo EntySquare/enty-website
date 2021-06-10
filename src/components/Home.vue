@@ -517,13 +517,12 @@ function scrollAnimationTo (currentY, targetY) {
 
   .advance-text {
     height: 90px;
-    width: 220px;
+    width: 270px;
     font-size: 14px;
     font-weight: 500;
     color: #000000;
     line-height: 24px;
     text-align: left;
-    margin: 0 auto;
     padding-top: 40px;
   }
 
