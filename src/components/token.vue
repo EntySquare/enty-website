@@ -460,6 +460,7 @@
 </template>
 
 <script>
+window.scroll(0, 0) // 页面加载置顶
 window.onload = function () {
   Adaptation()
 }
