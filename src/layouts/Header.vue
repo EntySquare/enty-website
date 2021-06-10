@@ -4,7 +4,9 @@
     <el-row type="flex" align="middle" style="height: 96px" class="hidden-sm-and-down">
       <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
               :xl="{span: 2, push: 1}">
-        <el-image :src="require('../assets/entyLogo.png')" style="height: 48px; width: 235px;"></el-image>
+        <router-link to="/">
+          <el-image :src="require('../assets/entyLogo.png')" style="height: 48px; width: 235px;"></el-image>
+        </router-link>
       </el-col>
       <el-col class="is-justify-center" :span="8" :push="6">
         <div>
@@ -55,12 +57,13 @@ export default {
 .headFont {
   white-space: nowrap;
 }
-a{
+
+a {
   text-decoration: none;
   color: #000000;
 }
 
-.router-link-exact-active{
+.router-link-exact-active {
   text-decoration: none;
   color: #00EAC4;
 }
