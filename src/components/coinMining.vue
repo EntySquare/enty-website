@@ -7,8 +7,8 @@
         </el-col>
         <el-col :xs="22" :sm="22" :md="20" :lg="16" :xl="14">
           <div>
-            <p style="margin: 348px 0px 36px 0px " class="title-text1">Entysquare</p>
-            <p style="margin: 57px 0px;" class="title-text-color">去中心化标准算力协议</p>
+            <p style="margin: 348px 0 36px 0 " class="title-text1">Entysquare</p>
+            <p style="margin: 57px 0;" class="title-text-color">去中心化标准算力协议</p>
             <p class="title-text2">购买算力凭证以</p>
             <p class="title-text2">赚取挖矿收益和代币奖励</p>
           </div>
@@ -199,10 +199,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  * {
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
   @media screen and (min-width: 1200px) {
     .title-text-color {
       font-size: 72px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #00EAC4;
       line-height: 72px;
@@ -214,7 +217,6 @@ export default {
 
     .title-text1 {
       font-size: 72px;
-      font-family: Skycoin-Regular, Skycoin;
       font-weight: 400;
       color: #000000;
       line-height: 72px;
@@ -223,19 +225,17 @@ export default {
 
     .title-text2 {
       font-size: 48px;
-      font-family: PingFang-SC-Light, PingFang-SC;
       font-weight: 300;
       color: #000000;
       line-height: 48px;
       text-align: center;
-      margin: 24px 0px;
+      margin: 24px 0;
     }
 
     .title-text3 {
       width: 576px;
       height: auto;
       font-size: 64px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #000000;
       line-height: 88px;
@@ -246,7 +246,6 @@ export default {
       width: 168px;
       height: auto;
       font-size: 56px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #000000;
       line-height: 78px;
@@ -257,7 +256,6 @@ export default {
       width: 448px;
       height: auto;
       font-size: 64px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #FFFFFF;
       line-height: 88px;
@@ -268,7 +266,6 @@ export default {
       width: 224px;
       height: auto;
       font-size: 32px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #000000;
       line-height: 32px;
@@ -279,7 +276,6 @@ export default {
       width: 96px;
       height: auto;
       font-size: 24px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #FFFFFF;
       line-height: 33px;
@@ -290,7 +286,6 @@ export default {
       width: 458px;
       height: auto;
       font-size: 18px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #1F1F1F;
       line-height: 28px;
@@ -300,7 +295,6 @@ export default {
     .content-text1 {
       width: 260px;
       font-size: 16px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #1E1E1E;
       line-height: 22px;
@@ -312,7 +306,6 @@ export default {
       width: 450px;
       height: auto;
       font-size: 18px;
-      font-family: PingFang-SC-Regular, PingFang-SC;
       font-weight: 400;
       color: #FFFFFF;
       line-height: 32px;
@@ -323,7 +316,6 @@ export default {
       width: 320px;
       height: auto;
       font-size: 18px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #FFFFFF;
       line-height: 32px;
@@ -334,7 +326,6 @@ export default {
     .content-text4 {
       height: auto;
       font-size: 28px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #4D4D4D;
       line-height: 28px;
@@ -346,8 +337,8 @@ export default {
       width: 100%;
       z-index: -1;
       position:absolute;
-      left:0px;
-      top:0px;
+      left:0;
+      top:0;
       display: block;
     }
     .usageBackgroundImgH5 {
@@ -355,8 +346,8 @@ export default {
       width: 100%;
       z-index: -1;
       position:absolute;
-      left:0px;
-      top:0px;
+      left:0;
+      top:0;
       display: none;
     }
 
@@ -368,7 +359,6 @@ export default {
       width: 17px;
       height: 28px;
       font-size: 28px;
-      font-family: PingFang-SC-Semibold, PingFang-SC;
       font-weight: 600;
       color: #00EAC4;
       line-height: 28px;
@@ -382,7 +372,6 @@ export default {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     .title-text-color {
       font-size: 68px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #00EAC4;
       line-height: 68px;
@@ -394,7 +383,6 @@ export default {
 
     .title-text1 {
       font-size: 68px;
-      font-family: Skycoin-Regular, Skycoin;
       font-weight: 400;
       color: #000000;
       line-height: 68px;
@@ -403,19 +391,17 @@ export default {
 
     .title-text2 {
       font-size: 42px;
-      font-family: PingFang-SC-Light, PingFang-SC;
       font-weight: 300;
       color: #000000;
       line-height: 42px;
       text-align: center;
-      margin: 24px 0px;
+      margin: 24px 0;
     }
 
     .title-text3 {
       width: 576px;
       height: auto;
       font-size: 60px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #000000;
       line-height: 84px;
@@ -426,7 +412,6 @@ export default {
       width: 168px;
       height: auto;
       font-size: 52px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #000000;
       line-height: 75px;
@@ -437,7 +422,6 @@ export default {
       width: 448px;
       height: auto;
       font-size: 60px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #FFFFFF;
       line-height: 82px;
@@ -448,7 +432,6 @@ export default {
       width: 224px;
       height: auto;
       font-size: 32px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #000000;
       line-height: 32px;
@@ -459,7 +442,6 @@ export default {
       width: 96px;
       height: auto;
       font-size: 24px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #FFFFFF;
       line-height: 33px;
@@ -469,7 +451,6 @@ export default {
     .content-text {
       height: auto;
       font-size: 18px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #1F1F1F;
       line-height: 28px;
@@ -479,7 +460,6 @@ export default {
     .content-text1 {
       width: 240px;
       font-size: 16px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #1E1E1E;
       line-height: 22px;
@@ -490,7 +470,6 @@ export default {
       width: 450px;
       height: auto;
       font-size: 18px;
-      font-family: PingFang-SC-Regular, PingFang-SC;
       font-weight: 400;
       color: #FFFFFF;
       line-height: 32px;
@@ -500,7 +479,6 @@ export default {
       width: 320px;
       height: auto;
       font-size: 18px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #FFFFFF;
       line-height: 32px;
@@ -510,7 +488,6 @@ export default {
     .content-text4 {
       height: auto;
       font-size: 28px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #4D4D4D;
       line-height: 28px;
@@ -525,8 +502,8 @@ export default {
       width: 100%;
       z-index: -1;
       position:absolute;
-      left:0px;
-      top:0px;
+      left:0;
+      top:0;
       display: block;
     }
     .usageBackground {
@@ -542,7 +519,6 @@ export default {
       width: 17px;
       height: 28px;
       font-size: 28px;
-      font-family: PingFang-SC-Semibold, PingFang-SC;
       font-weight: 600;
       color: #00EAC4;
       line-height: 28px;
@@ -552,7 +528,6 @@ export default {
   @media screen  and (max-width: 767px) {
     .title-text-color {
       font-size: 48px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #00EAC4;
       line-height: 72px;
@@ -564,7 +539,6 @@ export default {
 
     .title-text1 {
       font-size: 48px;
-      font-family: Skycoin-Bold, Skycoin;
       font-weight: bold;
       color: #000000;
       line-height: 48px;
@@ -573,18 +547,16 @@ export default {
 
     .title-text2 {
       font-size: 32px;
-      font-family: PingFang-SC-Light, PingFang-SC;
       font-weight: 300;
       color: #000000;
       line-height: 45px;
       text-align: center;
-      margin: 24px 0px;
+      margin: 24px 0;
     }
 
     .title-text3 {
       height: auto;
-      font-size: 36px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
+      font-size: 32px;
       font-weight: 500;
       color: #000000;
       line-height: 45px;
@@ -595,7 +567,6 @@ export default {
       width: 192px;
       height: auto;
       font-size: 36px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #000000;
       line-height: 40px;
@@ -606,7 +577,6 @@ export default {
     .title-text5 {
       height: auto;
       font-size: 36px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #FFFFFF;
       line-height: 45px;
@@ -616,8 +586,7 @@ export default {
     .sub-title-text1 {
       width: 120px;
       height: auto;
-      font-size: 24px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
+      font-size: 22px;
       font-weight: 500;
       color: #000000;
       line-height: 24px;
@@ -628,7 +597,6 @@ export default {
       width: 96px;
       height: auto;
       font-size: 24px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #FFFFFF;
       line-height: 33px;
@@ -638,7 +606,6 @@ export default {
     .content-text {
       height: auto;
       font-size: 18px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #1F1F1F;
       line-height: 28px;
@@ -648,7 +615,6 @@ export default {
     .content-text1 {
       width:120px;
       font-size: 16px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #1E1E1E;
       line-height: 20px;
@@ -659,7 +625,6 @@ export default {
     .content-text2 {
       height: auto;
       font-size: 18px;
-      font-family: PingFang-SC-Regular, PingFang-SC;
       font-weight: 400;
       color: #FFFFFF;
       line-height: 32px;
@@ -670,7 +635,6 @@ export default {
       width: 180px;
       height: auto;
       font-size: 18px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #FFFFFF;
       line-height: 32px;
@@ -681,7 +645,6 @@ export default {
     .content-text4 {
       height: auto;
       font-size: 20px;
-      font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #4D4D4D;
       line-height: 20px;
@@ -698,8 +661,8 @@ export default {
       height:2000px;
       z-index: -1;
       position:absolute;
-      left:0px;
-      top:0px;
+      left:0;
+      top:0;
       display: block;
     }
 
@@ -710,7 +673,6 @@ export default {
       width: 17px;
       height: 28px;
       font-size: 28px;
-      font-family: PingFang-SC-Semibold, PingFang-SC;
       font-weight: 600;
       color: #00EAC4;
       line-height: 28px;
