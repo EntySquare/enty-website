@@ -322,12 +322,19 @@
         </el-row>
       </div>
     </el-main>
+    <el-footer class="black" style="margin: 0">
+      <the-footer/>
+    </el-footer>
   </el-container>
 </template>
 
 <script>
+import Footer from '../layouts/Footer'
 export default {
   name: 'Home',
+  components: {
+    TheFooter: Footer
+  },
   data () {
     return {
       menuShow: false
