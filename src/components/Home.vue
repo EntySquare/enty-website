@@ -1,6 +1,6 @@
 <template>
   <el-container direction="vertical">
-    <el-main style="margin: 0; padding: 0;overflow-x: hidden;">
+    <el-main style="margin: 0; padding: 0;">
       <div
         style="width: 100%; background-color: #FFFFFF; position: fixed; z-index: 99">
         <el-row type="flex" align="middle" v-show="menuShow" style="height: 96px">
@@ -322,12 +322,20 @@
         </el-row>
       </div>
     </el-main>
+    <el-footer style="margin: 0; padding: 0">
+      <the-footer/>
+    </el-footer>
   </el-container>
 </template>
 
 <script>
+import Footer from '../layouts/Footer'
+
 export default {
   name: 'Home',
+  components: {
+    TheFooter: Footer
+  },
   data () {
     return {
       menuShow: false
@@ -674,6 +682,7 @@ function scrollAnimationTo (currentY, targetY) {
   .home-footer-image {
     width: 312px;
     height: 341px;
+    padding-bottom: 80px;
   }
 }
 
