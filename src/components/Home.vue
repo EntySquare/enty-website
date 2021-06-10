@@ -322,7 +322,7 @@
         </el-row>
       </div>
     </el-main>
-    <el-footer class="black" style="margin: 0">
+    <el-footer style="margin: 0; padding: 0">
       <the-footer/>
     </el-footer>
   </el-container>
@@ -330,6 +330,7 @@
 
 <script>
 import Footer from '../layouts/Footer'
+
 export default {
   name: 'Home',
   components: {
