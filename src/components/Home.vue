@@ -1572,7 +1572,7 @@ function scrollAnimationTo (currentY, targetY) {
   .home-rotter-arrow {
     width: 48px;
     height: 48px;
-    margin: 0 20px -17px 10px
+    margin: 0 20px -17px 10px;
   }
   .home-footer-image {
     width: 312px;
@@ -1866,8 +1866,7 @@ function scrollAnimationTo (currentY, targetY) {
   .home-rotter-arrow {
     width: 96px;
     height: 96px;
-    margin-right: 200px;
-    margin-top: -62px;
+    margin: -60px 0 0 80px;
   }
   .home-footer-image {
     width: 464px;
