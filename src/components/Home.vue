@@ -51,7 +51,7 @@
           <div style="height: 96px; width: 235px; padding-top: 48px" @click="scrollAnimation()">
             <el-image :src="require('../assets/entyLogo.png')"></el-image>
           </div>
-          <div class="headTitle1">Entysquare</div>
+          <div class="headTitle1">EntySquare</div>
           <div class="headTitle2">安全、简洁、速度。</div>
           <div class="headTitle3">凭借核心技术和专业沉淀，我们高效连接全球市场， 为所有商业创造价值。</div>
           <div style="height: 96px; width: 96px; padding-top: 60px" @click="scrollAnimation()">
@@ -105,7 +105,7 @@
       <el-row>
         <el-col :xs="{span: 20, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 12, push: 6}" :lg="{span: 2, push: 2}"
                 :xl="{span: 12, push: 7}">
-          <div class="bodyText1">Entysquare网络正在使区块链应用程序变得通用，从而提供无与伦比的用户覆盖率和使用率。Entysquare分散且可持续发展，旨在为所有商业创造价值。</div>
+          <div class="bodyText1">EntySquare网络正在使区块链应用程序变得通用，从而提供无与伦比的用户覆盖率和使用率。EntySquare分散且可持续发展，旨在为所有商业创造价值。</div>
         </el-col>
       </el-row>
       <el-row>
@@ -221,7 +221,7 @@
             <div class="consult-size">
               <el-image :src="require('../assets/consult1.png')" class="consult-image"></el-image>
               <div class="consult-date">2021年3月18日</div>
-              <div class="consult-text">Entysquare 创始人Terrill Tsang出任韩国 hillstone CTO …</div>
+              <div class="consult-text">EntySquare 创始人Terrill Tsang出任韩国 hillstone CTO …</div>
               <div class="consult-line"></div>
             </div>
           </el-col>
@@ -230,7 +230,7 @@
             <div class="consult-size">
               <el-image :src="require('../assets/consult2.png')" class="consult-image"></el-image>
               <div class="consult-date">2021年5月5日</div>
-              <div class="consult-text">Entysquare 创始人Terrill Tsang 担任 CSLA公链技术大使…</div>
+              <div class="consult-text">EntySquare 创始人Terrill Tsang 担任 CSLA公链技术大使…</div>
               <div class="consult-line"></div>
             </div>
           </el-col>
@@ -239,7 +239,7 @@
             <div class="consult-size">
               <el-image :src="require('../assets/consult1.png')" class="consult-image"></el-image>
               <div class="consult-date">2021年3月1日</div>
-              <div class="consult-text">Entysquare 为韩国Investors交易所提供技术服务…</div>
+              <div class="consult-text">EntySquare 为韩国Investors交易所提供技术服务…</div>
               <div class="consult-line"></div>
             </div>
           </el-col>
@@ -250,7 +250,7 @@
             <div class="consult-size">
               <el-image :src="require('../assets/consult4.png')" class="consult-image"></el-image>
               <div class="consult-date">2021年4月19日</div>
-              <div class="consult-text">Entysquare 团队为汉唐云提供算法技术和开发服务…</div>
+              <div class="consult-text">EntySquare 团队为汉唐云提供算法技术和开发服务…</div>
               <div class="consult-line"></div>
             </div>
           </el-col>
@@ -259,7 +259,7 @@
             <div class="consult-size">
               <el-image :src="require('../assets/consult5.png')" class="consult-image"></el-image>
               <div class="consult-date">2021年4月19日</div>
-              <div class="consult-text">Entysquare 团队为E-mu.ai提供技术服务…</div>
+              <div class="consult-text">EntySquare 团队为E-mu.ai提供技术服务…</div>
               <div class="consult-line"></div>
             </div>
           </el-col>
@@ -268,7 +268,7 @@
             <div class="consult-size">
               <el-image :src="require('../assets/consult6.png')" class="consult-image"></el-image>
               <div class="consult-date">2021年5月16日</div>
-              <div class="consult-text">Entysquare 团队为KB Token提供技术服务…</div>
+              <div class="consult-text">EntySquare 团队为KB Token提供技术服务…</div>
               <div class="consult-line"></div>
             </div>
           </el-col>
@@ -316,10 +316,18 @@
             <div class="home-footer-subTitle">在无界的区块链世界持续精进，以前沿技术为全球客户提供价值。</div>
             <div class="home-footer-text">
               联系我们
-              <span>
+                <el-popover
+                  placement="right"
+                  width="160"
+                  v-model="visible">
+                  <p>企业邮箱: terilscaub@gmail.com</p>
+                  <div style="text-align: right; margin: 0">
+                    <el-button type="primary" size="mini" @click="visible = false">确定</el-button>
+                  </div>
                 <el-image :src="require('../assets/grayArrow.png')"
+                          slot="reference"
                           class="home-rotter-arrow"></el-image>
-              </span>
+              </el-popover>
             </div>
           </el-col>
           <el-col :xs="{span: 20, push: 4}" :sm="{span: 7, push: 5}" :md="{span: 7, push: 5}" :lg="{span: 6, push: 10}"
@@ -347,7 +355,8 @@ export default {
   },
   data () {
     return {
-      menuShow: false
+      menuShow: false,
+      visible: false
     }
   },
   mounted () {
