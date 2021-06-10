@@ -52,7 +52,7 @@
           </div>
         </el-col>
         <el-col :xs="{span: 22, push: 1}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
-                :xl="{span: 13, push: 5}">
+                :xl="{span: 17, push: 5}">
           <div>
             <el-image :src="require('../assets/background.png')" class="headBackground"></el-image>
           </div>
@@ -372,12 +372,12 @@ function scrollAnimationTo (currentY, targetY) {
     // 一次调用滑动帧数，每次调用会不一样
     const dist = Math.ceil(needScrollTop / 50)
     _currentY += dist
-    window.scrollTo(0, currentY)
+    window.scrollTo(0, currentY - 96)
     // 如果移动幅度小于十个像素，直接移动，否则递归调用，实现动画效果
     if (needScrollTop > 1 || needScrollTop < -1) {
       scrollAnimationTo(_currentY, targetY)
     } else {
-      window.scrollTo(0, targetY)
+      window.scrollTo(0, targetY - 96)
     }
   }, 1)
 }
