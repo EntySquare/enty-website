@@ -25,9 +25,9 @@
         </div>
       </el-col>
       <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}" :lg="{span: '7',offset:'9'}" :xl="{span: '7',push:'1'}" style="">
-        <div style="height: 61px"></div>
+        <div style="height: 31px"></div>
         <div class="hidden-md-and-down">
-          <div style="height: 100px">
+          <div style="height: 130px">
           </div>
         </div>
         <img src="@/assets/entyColourLogo.png" style="height: 40px;width: auto;">

@@ -1,13 +1,13 @@
 <template>
   <el-container>
-    <el-header>
+    <el-header style="padding: 0;margin: 0">
       <the-header/>
     </el-header>
-    <el-main>
+    <el-main style="padding: 0;margin: 0">
       <router-view/>
     </el-main>
-    <el-footer class="black">
-      <the-footer/>
+    <el-footer style="padding: 0;margin: 0">
+      <TheFooter/>
     </el-footer>
   </el-container>
 </template>
@@ -25,4 +25,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+*{
+  padding: 0;
+}
+</style>
