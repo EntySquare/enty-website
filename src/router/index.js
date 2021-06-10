@@ -30,6 +30,11 @@ export default new Router({
           component: () => import('../components/publicChain.vue')
         },
         {
+          path: '/token',
+          name: 'token',
+          component: () => import('../components/token.vue')
+        },
+        {
           path: '/coinMining',
           name: 'coinMining',
           component: () => import('../components/coinMining.vue')

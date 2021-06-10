@@ -350,7 +350,6 @@
 
 <script>
 import Footer from '../layouts/Footer'
-
 export default {
   name: 'Home',
   components: {
@@ -363,6 +362,8 @@ export default {
     }
   },
   mounted () {
+    window.scroll(0, 0) // 页面加载置顶
+
     window.addEventListener('scroll', this.scrollToTop)
     this.scrollToTop()
   },

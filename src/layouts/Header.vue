@@ -22,7 +22,9 @@
               </router-link>
             </el-col>
             <el-col>
+              <router-link to="/token">
               <div class="headFont">代币</div>
+              </router-link>
             </el-col>
             <el-col>
               <router-link to="/coinMining">

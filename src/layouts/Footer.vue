@@ -35,11 +35,11 @@
         <img src="@/assets/entyColourLogo.png" style="height: 40px;width: auto;">
         <div style="height: 41px"></div>
         <div style="font-size: 14px;font-family: PingFang-SC-Medium, PingFang-SC;font-weight: 500;color: #FFFFFF;">
-          作为全球性区块链技术平台，Entysquare 致力于推动去中心化的商业运用。公司于 2020 年在中国深圳成立。
+          作为全球性区块链技术平台，EntySquare 致力于推动去中心化的商业运用。公司于 2020 年在中国深圳成立。
         </div>
         <div style="height: 20px"></div>
         <div style="font-size: 14px;font-family: PingFang-SC-Medium, PingFang-SC;font-weight: 500;color: #FFFFFF;">
-          Entysquare着力打造基于BA*-VRF共识的POS高性能公链，提供包括Defi流动性挖矿、去中心化钱包、公链搭建、算力挖矿等一系列产品和服务，助力企业在全球范围内的增长
+          EntySquare着力打造基于BA*-VRF共识的POS高性能公链，提供包括Defi流动性挖矿、去中心化钱包、公链搭建、算力挖矿等一系列产品和服务，助力企业在全球范围内的增长
         </div>
       </el-col>
 
@@ -50,7 +50,7 @@
               :lg="{span: '7',offset:'3'}" :xl="{span: '7',push:'1'}" style="">
         <div
           style="font-size: 14px;font-family: PingFang-SC-Semibold, PingFang-SC;font-weight: 600;color: #FFFFFF;line-height: 20px;">
-          © 2021 Entysquare All rights reserved
+          © 2021 EntySquare All rights reserved
         </div>
       </el-col>
       <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}"
