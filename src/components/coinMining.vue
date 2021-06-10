@@ -583,7 +583,7 @@ export default {
 
     .title-text3 {
       height: auto;
-      font-size: 36px;
+      font-size: 32px;
       font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #000000;
@@ -616,7 +616,7 @@ export default {
     .sub-title-text1 {
       width: 120px;
       height: auto;
-      font-size: 24px;
+      font-size: 22px;
       font-family: PingFang-SC-Medium, PingFang-SC;
       font-weight: 500;
       color: #000000;
