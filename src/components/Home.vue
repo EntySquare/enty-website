@@ -316,14 +316,15 @@
             <div class="home-footer-subTitle">在无界的区块链世界持续精进，以前沿技术为全球客户提供价值。</div>
             <div class="home-footer-text">
               联系我们
-                <el-popover
-                  placement="right"
-                  width="160"
-                  v-model="visible">
-                  <p>企业邮箱: terilscaub@gmail.com</p>
-                  <div style="text-align: right; margin: 0">
-                    <el-button type="primary" size="mini" @click="visible = false">确定</el-button>
-                  </div>
+              <el-popover
+                placement="right-start"
+                width="220"
+                v-model="visible">
+                <p>企业邮箱: terilscaub@gmail.com</p>
+                <p>联系电话: 15361445990</p>
+                <div style="text-align: right; margin: 0">
+                  <el-button style="color: #94469B" size="mini" @click="visible = false">确定</el-button>
+                </div>
                 <el-image :src="require('../assets/grayArrow.png')"
                           slot="reference"
                           class="home-rotter-arrow"></el-image>
