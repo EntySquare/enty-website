@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '../components/HelloWorld'
 import CommonLayout from '../layouts/CommonLayout'
-import publicChain from '../components/publicChain'
-import bottom from '../components/bottom'
 Vue.use(Router)
 
 export default new Router({
@@ -30,14 +27,14 @@ export default new Router({
         {
           path: '/publicChain',
           name: 'publicChain',
-          component: publicChain
+          component: () => import('../components/publicChain.vue')
+        },
+        {
+          path: '/coinMining',
+          name: 'coinMining',
+          component: () => import('../components/coinMining.vue')
         }
       ]
-    },
-    {
-      path: '/bottom',
-      name: 'bottom',
-      component: bottom
     }
   ]
 })
