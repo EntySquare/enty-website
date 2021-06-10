@@ -188,7 +188,6 @@
       </el-col>
     </el-row>
     </div>
-    <div style="position: relative;height:100px;background: #00EAC4" ></div>
   </div>
 </template>
 
