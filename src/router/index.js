@@ -11,7 +11,7 @@ export default new Router({
     //   component: HelloWorld
     // },
     {
-      path: '/home',
+      path: '/',
       name: 'Home',
       component: () => import('../components/home.vue')
     },
@@ -19,11 +19,11 @@ export default new Router({
       path: '/',
       component: CommonLayout,
       children: [
-        {
-          path: '/',
-          name: 'Home',
-          component: () => import('../components/home.vue')
-        },
+        // {
+        //   path: '/',
+        //   name: 'Home',
+        //   component: () => import('../components/home.vue')
+        // },
         {
           path: '/publicChain',
           name: 'publicChain',
