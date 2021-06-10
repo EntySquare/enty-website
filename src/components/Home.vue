@@ -32,7 +32,8 @@
               </el-row>
             </div>
           </el-col>
-          <el-col :span="3" :push="8">
+          <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 3, push: 7}" :lg="{span: 3, push: 7}"
+                  :xl="{span: 3, push: 8}">
             <div
               style="font-size: 16px; font-weight: 500; color: #00EAC4; display: inline; margin-bottom: 30px;">
               联系我们
