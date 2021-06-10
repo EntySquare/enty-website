@@ -1,6 +1,6 @@
 <template>
   <el-container direction="vertical">
-    <el-main style="margin: 0; padding: 0;">
+    <el-main style="margin: 0; padding: 0; overflow-x: hidden;">
       <div
         style="width: 100%; background-color: #FFFFFF; position: fixed; z-index: 99">
         <el-row type="flex" align="middle" v-show="menuShow" style="height: 96px">
@@ -412,12 +412,13 @@ function scrollAnimationTo (currentY, targetY) {
   }
 
   .headTitle2 {
-    width: 324px;
+    width: 319px;
     height: 56px;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 600;
     color: #000000;
     line-height: 56px;
+    text-align: left;
   }
 
   .headTitle3 {
@@ -457,13 +458,14 @@ function scrollAnimationTo (currentY, targetY) {
   }
 
   .bodyTitle2 {
-    width: 48px;
+    width: 100px;
     height: 80px;
     font-size: 24px;
     font-weight: 500;
     color: #A1A1A1;
     line-height: 80px;
     padding-top: 100px;
+    text-align: left;
   }
 
   .bodyTitle3 {
@@ -503,7 +505,7 @@ function scrollAnimationTo (currentY, targetY) {
 
   .advance-title {
     height: 32px;
-    width: 96px;
+    width: 150px;
     font-size: 32px;
     font-weight: 500;
     color: #000000;
