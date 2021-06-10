@@ -10,16 +10,22 @@
         <div>
           <el-row :gutter="38" type="flex">
             <el-col>
-              <div class="headFont">首页</div>
+              <router-link to="/">
+                <div class="headFont">首页</div>
+              </router-link>
             </el-col>
             <el-col>
-              <div class="headFont">公链</div>
+              <router-link to="/publicChain">
+                <div class="headFont">公链</div>
+              </router-link>
             </el-col>
             <el-col>
               <div class="headFont">代币</div>
             </el-col>
             <el-col>
-              <div class="headFont">挖矿</div>
+              <router-link to="/coinMining">
+                <div class="headFont">挖矿</div>
+              </router-link>
             </el-col>
           </el-row>
         </div>
@@ -48,9 +54,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .headFont {
-  color: #000000;
   white-space: nowrap;
 }
+a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.router-link-exact-active{
+  text-decoration: none;
+  color: #00EAC4;
+}
+
+.router-link-active {
+  text-decoration: none;
+}
+
 </style>

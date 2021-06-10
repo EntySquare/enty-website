@@ -12,16 +12,22 @@
             <div>
               <el-row :gutter="38" type="flex">
                 <el-col>
-                  <div class="headFont">首页</div>
+                  <router-link to="/">
+                    <div class="headFont">首页</div>
+                  </router-link>
                 </el-col>
                 <el-col>
-                  <div class="headFont">公链</div>
+                  <router-link to="/publicChain">
+                    <div class="headFont">公链</div>
+                  </router-link>
                 </el-col>
                 <el-col>
                   <div class="headFont">代币</div>
                 </el-col>
                 <el-col>
-                  <div class="headFont">挖矿</div>
+                  <router-link to="/coinMining">
+                    <div class="headFont">挖矿</div>
+                  </router-link>
                 </el-col>
               </el-row>
             </div>
@@ -273,7 +279,8 @@
                   :xl="{span: 6, push: 4}">
             <div class="body-title5" style="color: #000000;">合作伙伴</div>
           </el-col>
-          <el-col :xs="{span: 20, push: 0}" :sm="{span: 10, push: 0}" :md="{span: 10, push: 2}" :lg="{span: 6, push: 14}"
+          <el-col :xs="{span: 20, push: 0}" :sm="{span: 10, push: 0}" :md="{span: 10, push: 2}"
+                  :lg="{span: 6, push: 14}"
                   :xl="{span: 6, push: 9}">
             <div>
               <span class="cooperation-text1">如果您有兴趣和我们合作和探讨，请与</span>
@@ -344,6 +351,7 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', this.scrollToTop)
+    this.scrollToTop()
   },
   destroyed () {
     window.removeEventListener('scroll', this.scrollToTop)
@@ -352,7 +360,7 @@ export default {
     scrollAnimation: function () {
       let currentY = document.documentElement.scrollTop || document.body.scrollTop
       // scrollAnimation(currentY, window.innerHeight)
-      scrollAnimationTo(currentY, 1080)
+      scrollAnimationTo(currentY, screen.height)
       this.menuShow = true
     },
     // 为了计算距离顶部的高度，当高度大于60显示回顶部图标，小于60则隐藏
@@ -388,6 +396,20 @@ function scrollAnimationTo (currentY, targetY) {
 * {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
   Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.router-link-exact-active {
+  text-decoration: none;
+  color: #00EAC4;
+}
+
+.router-link-active {
+  text-decoration: none;
 }
 
 /*移动端样式*/
@@ -1587,7 +1609,6 @@ function scrollAnimationTo (currentY, targetY) {
     width: 1360px;
   }
   .headFont {
-    color: #000000;
     white-space: nowrap;
   }
 
