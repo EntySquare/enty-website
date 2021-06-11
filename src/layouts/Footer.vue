@@ -3,7 +3,7 @@
     <el-row style="background: black;text-align: left">
       <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}"
               :lg="{span: '2',offset:'3'}" :xl="{span: '1',push:'1'}"
-              style=";font-size: 28px;font-family: Nunito-SemiBold, Nunito;font-weight: 600;color: #FFFFFF;">
+              style=";font-size: 28px;font-weight: 600;color: #FFFFFF;">
         <div style="height: 61px"></div>
         <div class="hidden-md-and-down">
           <div style="height: 100px">
@@ -34,11 +34,11 @@
         </div>
         <img src="@/assets/entyColourLogo.png" style="height: 40px;width: auto;">
         <div style="height: 41px"></div>
-        <div style="font-size: 14px;font-family: PingFang-SC-Medium, PingFang-SC;font-weight: 500;color: #FFFFFF;">
+        <div style="font-size: 14px;font-weight: 500;color: #FFFFFF;">
           作为全球性区块链技术平台，EntySquare 致力于推动去中心化的商业运用。公司于 2020 年在中国深圳成立。
         </div>
         <div style="height: 20px"></div>
-        <div style="font-size: 14px;font-family: PingFang-SC-Medium, PingFang-SC;font-weight: 500;color: #FFFFFF;">
+        <div style="font-size: 14px;font-weight: 500;color: #FFFFFF;">
           EntySquare着力打造基于BA*-VRF共识的POS高性能公链，提供包括Defi流动性挖矿、去中心化钱包、公链搭建、算力挖矿等一系列产品和服务，助力企业在全球范围内的增长
         </div>
       </el-col>
@@ -49,13 +49,13 @@
       <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}"
               :lg="{span: '7',offset:'3'}" :xl="{span: '7',push:'1'}" style="">
         <div
-          style="font-size: 14px;font-family: PingFang-SC-Semibold, PingFang-SC;font-weight: 600;color: #FFFFFF;line-height: 20px;">
+          style="font-size: 14px;font-weight: 600;color: #FFFFFF;line-height: 20px;">
           © 2021 EntySquare All rights reserved
         </div>
       </el-col>
       <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}"
               :lg="{span: '9',offset:'4'}" :xl="{span: '7',push:'0'}"
-              style="font-size: 14px;font-family: PingFang-SC-Semibold, PingFang-SC;font-weight: 600;color: #FFFFFF;padding-top: 20px">
+              style="font-size: 14px;font-weight: 600;color: #FFFFFF;padding-top: 20px">
         <span style="margin-right: 20px">+Twitter</span>
         <span style="margin-right: 20px">+Facebook</span>
         <span style="margin-right: 20px">+Reddit</span>
@@ -73,6 +73,9 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+* {
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
 </style>
