@@ -1,19 +1,20 @@
 <template>
-  <div>
-    <div class="container"  style="height:1116px">
-      <el-row :gutter="10" align="middle" justify="center">
-        <el-col :xs="1" :sm="1" :md="2" :lg="4" :xl="5">
+  <div  style="overflow-x: hidden;">
+    <div class="container" >
+      <el-row :gutter="10" :style="loatingBalloonPng" align="middle" justify="center">
+        <el-col :xs="1" :sm="1" :md="2" :lg="4" :xl="4">
           <div style="min-height: 36px;"></div>
         </el-col>
-        <el-col :xs="22" :sm="22" :md="20" :lg="16" :xl="14">
-          <div>
-            <p style="margin: 348px 0 36px 0 " class="title-text1">Entysquare</p>
-            <p style="margin: 57px 0;" class="title-text-color">去中心化标准算力协议</p>
-            <p class="title-text2">购买算力凭证以</p>
-            <p class="title-text2">赚取挖矿收益和代币奖励</p>
-          </div>
+        <el-col :xs="22" :sm="22" :md="20" :lg="16" :xl="16" style="height: 800px">
+            <div style="font-size: 24px;;font-weight: 300;color: #000000;margin-top: 200px">
+              敬请期待
+            </div>
+            <div class="title-text1">Entysquare</div>
+            <div style="margin: 57px 0;" class="title-text-color"><span>去中心化</span><span style="white-space: nowrap">标准算力协议</span></div>
+            <div class="title-text2">购买算力凭证以</div>
+            <div class="title-text2">赚取挖矿收益和代币奖励</div>
         </el-col>
-        <el-col :xs="1" :sm="1" :md="2" :lg="4" :xl="5">
+        <el-col :xs="1" :sm="1" :md="2" :lg="4" :xl="4">
           <div  style="min-height: 36px;"></div>
         </el-col>
       </el-row>
@@ -32,7 +33,7 @@
           </div>
         </el-col>
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:6}" :xl="{span:6,push:8}">
-          <div style="margin:70px 0px" class="content-text">Entysquare是去中心化云算力交易平台，提供具有不同规模的加密货币挖矿能力，让您无需处理复杂的硬件和软件设置，无需任何矿池费用。为用户、投资人、企业及大型投资机构能简单、智能、快速地获取加密货币</div>
+          <div style="margin:70px 0" class="content-text">Entysquare是去中心化云算力交易平台，提供具有不同规模的加密货币挖矿能力，让您无需处理复杂的硬件和软件设置，无需任何矿池费用。为用户、投资人、企业及大型投资机构能简单、智能、快速地获取加密货币</div>
         </el-col>
       </el-row>
     </div>
@@ -47,7 +48,7 @@
           <el-col :span="11" :push="1" >
             <div style="height:300px; margin-top: 50px;">
               <div style="height:120px;text-align: left">
-                <el-image style="width: 80px;height: 80px;" :src="require('../assets/icon1.png')"></el-image>
+                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 每日挖矿产出
@@ -60,7 +61,7 @@
           <el-col :span="11" :push="2" >
             <div style="height:300px;margin-top: 50px;">
               <div style="height:120px;text-align: left">
-                <el-image style="width: 80px;height: 80px;" :src="require('../assets/icon1.png')"></el-image>
+                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 先进的挖矿技术
@@ -75,7 +76,7 @@
           <el-col :span="11" :push="1">
             <div style="height:300px;">
               <div style="height:120px;text-align: left">
-                <el-image style="width: 80px;height: 80px;" :src="require('../assets/icon1.png')"></el-image>
+                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 多币种挖矿
@@ -88,7 +89,7 @@
           <el-col :span="11" :push="2">
             <div style="height:300px;">
               <div style="height:120px;text-align: left">
-                <el-image style="width: 80px;height: 80px;" :src="require('../assets/icon1.png')"></el-image>
+                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 安全透明
@@ -103,7 +104,7 @@
           <el-col :span="11" :push="1">
             <div style="height:300px;">
               <div style="height:120px;text-align: left">
-                <el-image style="width: 80px;height: 80px;" :src="require('../assets/icon1.png')"></el-image>
+                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 自由交易
@@ -116,7 +117,7 @@
           <el-col :span="11" :push="2">
             <div style="height:300px;">
               <div style="height:120px;text-align: left">
-                <el-image style="width: 80px;height: 80px;" :src="require('../assets/icon1.png')"></el-image>
+                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 真实算力
@@ -129,14 +130,12 @@
         </el-row>
       </el-col>
     </el-row>
-    </div>
+    </div>S
     <div class="container usageBackground">
-      <el-image class="usageBackgroundImg" :src="require('../assets/usageBackground.png')"></el-image>
-      <el-image class="usageBackgroundImgH5" :src="require('../assets/usageBackgroundH5.png')"></el-image>
-      <el-row :gutter="10">
+      <el-row :gutter="10" :style="usageBackgroundImg">
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:1}" :xl="{span:6,push:4}">
           <div style="margin-top:148px;">
-            <el-image class="coinCardSet" :src="require('../assets/coinCardSet.png')"></el-image>
+            <img class="coinCardSet" src="@/assets/coinCardSet.png">
           </div>
         </el-col>
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:6}" :xl="{span:8,push:8}">
@@ -149,7 +148,7 @@
           <div style="margin-top: 114px" class="content-text2">我们的挖矿专家和算法交易框架拥有对加密货币的专业性。您可以通过我们的挖矿页面直接挖取SHA-256合约-BTC、Ethash合约-ETH和各种代币。可以挖取的加密货币取决于您选择的合约。</div>
           <div style="height: 140px;margin-top: 96px;">
             <div style="height: 74px;width: 74px;position: absolute;margin-top: 13px;">
-              <el-image style="width: 74px;height:74px;" :src="require('../assets/icon2.png')"></el-image>
+              <img style="width: 74px;height:74px;" src="@/assets/icon2.png">
             </div>
             <div class="sub-title-text2" style="position: relative;left:118px;">
               自动计算
@@ -160,7 +159,7 @@
           </div>
           <div style="height: 140px;position:relative;margin-top:60px">
             <div style="height: 74px;width: 74px;position: absolute;margin-top: 13px;">
-              <el-image style="width: 74px;height:74px;" :src="require('../assets/icon3.png')"></el-image>
+              <img style="width: 74px;height:74px;" src="@/assets/icon3.png">
             </div>
             <div class="sub-title-text2"  style="position: relative;left:118px;">
               算力凭证
@@ -193,7 +192,21 @@
 
 <script>
 export default {
-  name: 'coinMining'
+  name: 'coinMining',
+  data () {
+    return {
+      loatingBalloonPng: {
+        backgroundImage: 'url(' + require('@/assets/floatingBalloon.png') + ')',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 100%'
+      },
+      usageBackgroundImg: {
+        backgroundImage: 'url(' + require('@/assets/usageBackground.png') + ')',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 100%'
+      }
+    }
+  }
 }
 </script>
 
@@ -217,6 +230,7 @@ export default {
 
     .title-text1 {
       font-size: 72px;
+      height: auto;
       font-weight: 400;
       color: #000000;
       line-height: 72px;
@@ -332,27 +346,11 @@ export default {
       text-align: left;
       margin-top: 80px;
     }
-    .usageBackgroundImg {
-      height:1285px;
-      width: 100%;
-      z-index: -1;
-      position:absolute;
-      left:0;
-      top:0;
-      display: block;
-    }
-    .usageBackgroundImgH5 {
-      height:2156px;
-      width: 100%;
-      z-index: -1;
-      position:absolute;
-      left:0;
-      top:0;
-      display: none;
-    }
 
     .usageBackground {
       height: 1285px;
+      background: black;
+      z-index: -2;
     }
 
     .plusSymble {
@@ -493,18 +491,6 @@ export default {
       line-height: 28px;
       text-align: left;
       margin-top: 80px;
-    }
-    .usageBackgroundImg {
-      display: none;
-    }
-    .usageBackgroundImgH5 {
-      height:2156px;
-      width: 100%;
-      z-index: -1;
-      position:absolute;
-      left:0;
-      top:0;
-      display: block;
     }
     .usageBackground {
       height: 2500px;
@@ -651,23 +637,10 @@ export default {
       text-align: left;
       margin-top: 80px;
     }
-
-    .usageBackgroundImg {
-      display: none;
-    }
-
-    .usageBackgroundImgH5 {
-      width: 100%;
-      height:2000px;
-      z-index: -1;
-      position:absolute;
-      left:0;
-      top:0;
-      display: block;
-    }
-
     .usageBackground {
       height: 2000px;
+      background: black;
+      z-index: -2;
     }
     .plusSymble {
       width: 17px;
@@ -676,6 +649,10 @@ export default {
       font-weight: 600;
       color: #00EAC4;
       line-height: 28px;
+    }
+    .coinCardSet{
+      width: 100%;
+      height:auto;
     }
   }
   .container {
