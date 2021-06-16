@@ -460,6 +460,7 @@
 </template>
 
 <script>
+document.body.scrollTop = document.documentElement.scrollTop = 0
 window.scroll(0, 0) // 页面加载置顶
 window.onload = function () {
   Adaptation()
@@ -548,6 +549,10 @@ export default {
         backgroundSize: '100% 100%'
       }
     }
+  },
+  mounted () {
+    window.scroll(0, 0) // 页面加载置顶
+    document.body.scrollTop = document.documentElement.scrollTop = 0
   },
   components: {
   }

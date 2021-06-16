@@ -191,8 +191,13 @@
 </template>
 
 <script>
+document.body.scrollTop = document.documentElement.scrollTop = 0
 export default {
   name: 'coinMining',
+  mounted () {
+    window.scroll(0, 0) // 页面加载置顶
+    document.body.scrollTop = document.documentElement.scrollTop = 0
+  },
   data () {
     return {
       loatingBalloonPng: {

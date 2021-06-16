@@ -15,7 +15,8 @@
 <script>
 import Header from './Header'
 import Footer from './Footer'
-
+document.body.scrollTop = document.documentElement.scrollTop = 0
+window.scroll(0, 0) // 页面加载置顶
 export default {
   name: 'CommonLayout',
   components: {

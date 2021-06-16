@@ -16,7 +16,7 @@
         <div style="height: 20px"></div>
         <div id="headFont56px" style="font-size: 56px;;font-weight: 500;color: #94469B;line-height: 78px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
         <span>构建下一代</span>
-        <span style="white-space: nowrap">中心化支付网络</span>
+        <span style="white-space: nowrap">去中心化支付网络</span>
         </div>
         <div style="height: 20px"></div>
         <div id="headFont32px" style="font-size: 32px;;font-weight: 300;color: #000000;line-height: 45px;">
@@ -332,6 +332,7 @@
 
 <script>
 window.scroll(0, 0) // 页面加载置顶
+document.body.scrollTop = document.documentElement.scrollTop = 0
 window.onload = function () {
   Adaptation()
 }
@@ -361,6 +362,10 @@ function Adaptation () {
 export default {
   name: 'publicChain',
   // comments: {Metaballs},
+  mounted () {
+    window.scroll(0, 0) // 页面加载置顶
+    document.body.scrollTop = document.documentElement.scrollTop = 0
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
