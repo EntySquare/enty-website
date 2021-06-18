@@ -9,7 +9,7 @@ function checkGL (gl, when) {
     possibleErrors.forEach(function (err) {
       if (gl[err] === e) estr = err
     })
-    console.error('glGetError: ' + estr + ' during ' + when)
+    //console.error('glGetError: ' + estr + ' during ' + when)
   }
 }
 
@@ -17,15 +17,13 @@ function createProgram (gl, fs, vs, attribLocs) {
   function compileShader (src, typestr) {
     var shader = gl.createShader(gl[typestr])
     if (!shader) {
-      console.error('createShader failed... type = ' + typestr)
+      //console.error('createShader failed... type = ' + typestr)
       return null
     }
     gl.shaderSource(shader, src)
     gl.compileShader(shader)
     if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-      console.error(
-        'Failed to compile ' + typestr + ': ' + gl.getShaderInfoLog(shader)
-      )
+      //console.error('Failed to compile ' + typestr + ': ' + gl.getShaderInfoLog(shader))
       gl.deleteShader(shader)
       return null
     }
@@ -61,9 +59,7 @@ function createProgram (gl, fs, vs, attribLocs) {
   gl.deleteShader(fs)
 
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    console.error(
-      'shader link failed: program info log:\n' + gl.getProgramInfoLog(program)
-    )
+    //console.error('shader link failed: program info log:\n' + gl.getProgramInfoLog(program))
     gl.deleteProgram(program)
     return false
   }
@@ -4865,7 +4861,7 @@ Simulation.prototype.updateTriangulation = function () {
         var py = -GRID_SIZE * 0.5 + y
         var pz = -GRID_SIZE * 0.5 + z
         // collect neighbors
-        neighbors[0] = grid[xOffset + zPitch + yPitch];
+        neighbors[0] = grid[xOffset + zPitch + yPitch]
         neighbors[1] = grid[xOffset + zPitch + yPitch + 1]
         neighbors[2] = grid[xOffset + yPitch + 1]
         neighbors[3] = grid[xOffset + yPitch]
@@ -4887,7 +4883,7 @@ Simulation.prototype.updateTriangulation = function () {
       }
     }
   }
-  console.log('verts: ' + numVerts)
+  //console.log('verts: ' + numVerts)
   return numVerts
 }
 
@@ -5067,21 +5063,21 @@ Simulation.prototype.update = function (gl, dt) {
   let spheres = this.spheres
   let grid = this.grid
 
-  console.time('update')
-  console.time('updateGrid')
+  //console.time('update')
+  //console.time('updateGrid')
   this.updateGrid()
-  console.timeEnd('updateGrid')
+  //console.timeEnd('updateGrid')
 
-  console.time('updateNormals')
+  //console.time('updateNormals')
   this.updateNormals()
-  console.timeEnd('updateNormals')
+  //console.timeEnd('updateNormals')
 
-  console.time('updateTriangulation')
+  //console.time('updateTriangulation')
   let numVerts = this.updateTriangulation()
-  console.timeEnd('updateTriangulation')
-  console.timeEnd('update')
+  //console.timeEnd('updateTriangulation')
+  //console.timeEnd('update')
 
-  console.time('render')
+  //console.time('render')
 
   gl.bindBuffer(gl.ARRAY_BUFFER, this.vbo)
   gl.bufferSubData(gl.ARRAY_BUFFER, 0, this.vertexData)
@@ -5124,7 +5120,7 @@ Simulation.prototype.update = function (gl, dt) {
   gl.drawArrays(gl.TRIANGLES, 0, numVerts)
   checkGL(gl, 'draw')
 
-  console.timeEnd('render')
+  //console.timeEnd('render')
 }
 let c = document.getElementsByTagName('canvas')[0]
 c.width = window.innerWidth
