@@ -2,6 +2,7 @@
 <template>
 <!--  overflow-x: hidden;position:fixed;height: 100%;width: 100%; ;padding: 0;-->
   <div  style=";text-align: left;overflow-x: hidden;">
+    <canvas></canvas>
     <el-row :gutter="10">
       <el-col style="height: 800px;text-align:center;"  :style="floatingBalloonPng"  :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}" :lg="{span: '18',offset:'3'}" :xl="{span: '16',offset:'4'}">
         <div style="height: 20%"></div>
@@ -359,6 +360,7 @@ function Adaptation () {
     document.getElementById('headFont32px').style.fontSize = '32px'
   }
 }
+import('../assets/js/metaBall.js')
 export default {
   name: 'publicChain',
   // comments: {Metaballs},
