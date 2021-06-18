@@ -1,7 +1,7 @@
 /* eslint-disable */
 function checkGL (gl, when) {
-  var e
-  while ((e = gl.getError()) != gl.NO_ERROR) {
+  let e
+  while ((e = gl.getError()) !== gl.NO_ERROR) {
     var estr = '' + e,
       possibleErrors = 'INVALID_ENUM INVALID_VALUE INVALID_OPERATION INVALID_FRAMEBUFFER_OPERATION OUT_OF_MEMORY STACK_UNDERFLOW STACK_OVERFLOW'.split(
         ' '
@@ -4708,7 +4708,7 @@ void main() {
 
 function Simulation (gl) {
   this.grid = []
-  for (var i = 0; i < GRID_SIZE * GRID_SIZE * GRID_SIZE; ++i) {
+  for (let i = 0; i < GRID_SIZE * GRID_SIZE * GRID_SIZE; ++i) {
     this.grid.push(new GridCell())
   }
   this.programInfo = createProgram(gl, fragShader, vertexShader, {
@@ -4866,8 +4866,8 @@ Simulation.prototype.updateTriangulation = function () {
         var pz = -GRID_SIZE * 0.5 + z
         // collect neighbors
         neighbors[0] = grid[xOffset + zPitch + yPitch];
-        (neighbors[1] = grid[xOffset + zPitch + yPitch + 1]),
-          (neighbors[2] = grid[xOffset + yPitch + 1])
+        neighbors[1] = grid[xOffset + zPitch + yPitch + 1]
+        neighbors[2] = grid[xOffset + yPitch + 1]
         neighbors[3] = grid[xOffset + yPitch]
         neighbors[4] = grid[xOffset + zPitch]
         neighbors[5] = grid[xOffset + zPitch + 1]
@@ -4936,9 +4936,9 @@ Simulation.prototype.triangulate = function (
     }
   }
 
-  var deltaR = colors[0] - colors[0]
-  var deltaG = colors[1] - colors[1]
-  var deltaB = colors[2] - colors[2]
+  // var deltaR = colors[0] - colors[0]
+  // var deltaG = colors[1] - colors[1]
+  // var deltaB = colors[2] - colors[2]
 
   var num = 0
   var vertV = this.vertexData
@@ -4951,7 +4951,7 @@ Simulation.prototype.triangulate = function (
   ) {
     var uindex = uIndexData[indIndex + ii]
     var vsIndex = (uindex * 6) | 0
-    var px = verts[vsIndex + 0]
+    var px = verts[vsIndex]
     var py = verts[vsIndex + 1]
     var pz = verts[vsIndex + 2]
     vertV[vi + 0] = px + sx
@@ -4960,9 +4960,13 @@ Simulation.prototype.triangulate = function (
     vertV[vi + 3] = verts[vsIndex + 3] // nx
     vertV[vi + 4] = verts[vsIndex + 4] // ny
     vertV[vi + 5] = verts[vsIndex + 5] // nz
-    var r = ((colors[3] + px * deltaR) * 255) & 0xff
-    var g = ((colors[0] + py * deltaG) * 255) & 0xff
-    var b = ((colors[1] + pz * deltaB) * 255) & 0xff
+    // var r = ((colors[3] + px * deltaR) * 255) & 0xff
+    // var g = ((colors[0] + py * deltaG) * 255) & 0xff
+    // var b = ((colors[1] + pz * deltaB) * 255) & 0xff
+    // 白色球体
+    const r = (255) & 0xff
+    const g = (255) & 0xff
+    const b = (255) & 0xff
     vertC[vi + 6] = 0xff000000 | (b << 16) | (g << 8) | r
   }
   return num
@@ -4974,23 +4978,23 @@ Simulation.prototype.lerpVertex = function (ri, iso, idx0, v0, idx1, v1) {
   var edge1i = idx1 * 3
   var result = this.tmpVerts
   if (Math.abs(iso - v1) <= EPSILON) {
-    result[ri + 0] = cubeData[edge1i + 0]
+    result[ri + 0] = cubeData[edge1i]
     result[ri + 1] = cubeData[edge1i + 1]
     result[ri + 2] = cubeData[edge1i + 2]
     return 1.0
   }
   if (Math.abs(iso - v0) <= EPSILON || Math.abs(v0 - v1) <= EPSILON) {
-    result[ri + 0] = cubeData[edge0i + 0]
+    result[ri + 0] = cubeData[edge0i]
     result[ri + 1] = cubeData[edge0i + 1]
     result[ri + 2] = cubeData[edge0i + 2]
     return 0.0
   }
   var lerpAmt = (iso - v0) / (v1 - v0)
-  var e0x = cubeData[edge0i + 0]
+  var e0x = cubeData[edge0i]
   var e0y = cubeData[edge0i + 1]
   var e0z = cubeData[edge0i + 2]
 
-  result[ri + 0] = e0x + lerpAmt * (cubeData[edge1i + 0] - e0x)
+  result[ri + 0] = e0x + lerpAmt * (cubeData[edge1i] - e0x)
   result[ri + 1] = e0y + lerpAmt * (cubeData[edge1i + 1] - e0y)
   result[ri + 2] = e0z + lerpAmt * (cubeData[edge1i + 2] - e0z)
   return lerpAmt
@@ -5001,7 +5005,9 @@ Simulation.prototype.update = function (gl, dt) {
   gl.frontFace(gl.CW)
   gl.enable(gl.DEPTH_TEST)
 
-  gl.clearColor(0.2, 0.2, 0.2, 1.0)
+  // gl.clearColor(0.2, 0.2, 0.2, 1.0)
+  // 背景色
+  gl.clearColor(1, 1, 1, 0)
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
   gl.useProgram(this.programInfo.program)
 
@@ -5057,9 +5063,9 @@ Simulation.prototype.update = function (gl, dt) {
 
   checkGL(gl, 'prerender')
 
-  var invDim = 1.0 / (GRID_SIZE - 1.0)
-  var spheres = this.spheres
-  var grid = this.grid
+  let invDim = 1.0 / (GRID_SIZE - 1.0)
+  let spheres = this.spheres
+  let grid = this.grid
 
   console.time('update')
   console.time('updateGrid')
@@ -5071,7 +5077,7 @@ Simulation.prototype.update = function (gl, dt) {
   console.timeEnd('updateNormals')
 
   console.time('updateTriangulation')
-  var numVerts = this.updateTriangulation()
+  let numVerts = this.updateTriangulation()
   console.timeEnd('updateTriangulation')
   console.timeEnd('update')
 
@@ -5120,16 +5126,16 @@ Simulation.prototype.update = function (gl, dt) {
 
   console.timeEnd('render')
 }
-var c = document.getElementsByTagName('canvas')[0]
+let c = document.getElementsByTagName('canvas')[0]
 c.width = window.innerWidth
 c.height = window.innerHeight
-var gl = c.getContext('webgl', {failIfMajorPerformanceCaveat: true})
+let gl = c.getContext('webgl', {failIfMajorPerformanceCaveat: true})
 if (!gl) {
   alert('no webgl')
   throw Error('no webgl')
 }
-var simulation = new Simulation(gl)
-var lastUpdate = 0
+let simulation = new Simulation(gl)
+let lastUpdate = 0
 
 function update (timestamp) {
   if (!lastUpdate) {
@@ -5137,9 +5143,9 @@ function update (timestamp) {
     return requestAnimationFrame(update)
   }
   requestAnimationFrame(update)
-  var dt = timestamp - lastUpdate
+  let dt = timestamp - lastUpdate
   lastUpdate = timestamp
-  simulation.update(gl, dt / 4000)
+  simulation.update(gl, dt / 6000)
 }
 
 window.requestAnimationFrame(update)
