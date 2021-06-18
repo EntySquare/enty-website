@@ -1,7 +1,8 @@
 <template>
   <div  style="overflow-x: hidden;">
     <div class="container" >
-      <el-row :gutter="10" :style="loatingBalloonPng" align="middle" justify="center">
+      <el-row :gutter="10"  align="middle" justify="center">
+        <canvas style="height: 100%;width: 100%;position:absolute;left:0px;top:0px;z-index:-1;"></canvas>
         <el-col :xs="1" :sm="1" :md="2" :lg="4" :xl="4">
           <div style="min-height: 36px;"></div>
         </el-col>
@@ -191,6 +192,7 @@
 </template>
 
 <script>
+import('../assets/js/metaBall.js')
 document.body.scrollTop = document.documentElement.scrollTop = 0
 export default {
   name: 'coinMining',

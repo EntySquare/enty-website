@@ -3,7 +3,8 @@
 <!--  overflow-x: hidden;position:fixed;height: 100%;width: 100%; ;padding: 0; eseTokenText.png-->
   <div  style=";text-align: left;overflow-x: hidden;">
     <el-row :gutter="10">
-      <el-col style="height: 800px;text-align:center;"  :style="floatingBalloonPng"  :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}" :lg="{span: '18',offset:'3'}" :xl="{span: '16',offset:'4'}">
+      <el-col style="height: 800px;text-align:center;"  :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}" :lg="{span: '18',offset:'3'}" :xl="{span: '16',offset:'4'}">
+        <canvas style="height: 800px;width: 100%;position:absolute;left:0px;top:0px;z-index:-1;"></canvas>
         <div style="height: 20%"></div>
         <div style="font-size: 24px;;font-weight: 300;color: #000000;">
           敬请期待
@@ -532,6 +533,7 @@ function Adaptation () {
     document.getElementById('m4_32px').style.fontSize = '12px'
   }
 }
+import('../assets/js/metaBall.js')
 export default {
   name: 'publicChain',
   // comments: {Metaballs},
