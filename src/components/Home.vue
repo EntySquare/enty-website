@@ -431,7 +431,8 @@ export default {
     // 为了计算距离顶部的高度，当高度大于60显示回顶部图标，小于60则隐藏
     scrollToTop () {
       let currentY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      this.menuShow = currentY > 60 && screen.width >= 750
+      this.menuShow = currentY > 60 && screen.width >= 375
+      // this.menuShow = currentY > 60 && screen.width >= 750
     }
   }
 }
