@@ -2,7 +2,7 @@
 function checkGL (gl, when) {
   let e
   while ((e = gl.getError()) !== gl.NO_ERROR) {
-    var estr = '' + e,
+    let estr = '' + e,
       possibleErrors = 'INVALID_ENUM INVALID_VALUE INVALID_OPERATION INVALID_FRAMEBUFFER_OPERATION OUT_OF_MEMORY STACK_UNDERFLOW STACK_OVERFLOW'.split(
         ' '
       )
@@ -15,7 +15,7 @@ function checkGL (gl, when) {
 
 function createProgram (gl, fs, vs, attribLocs) {
   function compileShader (src, typestr) {
-    var shader = gl.createShader(gl[typestr])
+    let shader = gl.createShader(gl[typestr])
     if (!shader) {
       //console.error('createShader failed... type = ' + typestr)
       return null
@@ -132,9 +132,9 @@ function frustum (xmin, xmax, ymin, ymax, zNear, zFar) {
   var one_deltay = 1 / (ymax - ymin)
   var one_deltaz = 1 / (zFar - zNear)
 
-  m[0 + 4 * 0] = doubleznear * one_deltax
-  m[1 + 4 * 1] = doubleznear * one_deltay
-  m[0 + 4 * 2] = (xmax + xmin) * one_deltax
+  m[0] = doubleznear * one_deltax
+  m[1 + 4] = doubleznear * one_deltay
+  m[4 * 2] = (xmax + xmin) * one_deltax
   m[1 + 4 * 2] = (ymax + ymin) * one_deltay
   m[2 + 4 * 2] = -(zFar + zNear) * one_deltaz
   m[3 + 4 * 2] = -1
@@ -157,28 +157,28 @@ function translation (x, y, z) {
 
 function mat4mul (a, m, out) {
   if (!out) out = mat4()
-  var m00 = m[4 * 0 + 0],
-    m01 = m[4 * 0 + 1],
-    m02 = m[4 * 0 + 2],
-    m03 = m[4 * 0 + 3]
-  var m10 = m[4 * 1 + 0],
-    m11 = m[4 * 1 + 1],
-    m12 = m[4 * 1 + 2],
-    m13 = m[4 * 1 + 3]
-  var m20 = m[4 * 2 + 0],
+  var m00 = m[0],
+    m01 = m[1],
+    m02 = m[2],
+    m03 = m[3]
+  var m10 = m[4],
+    m11 = m[4 + 1],
+    m12 = m[4 + 2],
+    m13 = m[4 + 3]
+  var m20 = m[4 * 2],
     m21 = m[4 * 2 + 1],
     m22 = m[4 * 2 + 2],
     m23 = m[4 * 2 + 3]
-  var m30 = m[4 * 3 + 0],
+  var m30 = m[4 * 3],
     m31 = m[4 * 3 + 1],
     m32 = m[4 * 3 + 2],
     m33 = m[4 * 3 + 3]
   for (var i = 0; i < 4; i++) {
-    var ai0 = a[i + 0],
+    var ai0 = a[i],
       ai1 = a[i + 4],
       ai2 = a[i + 8],
       ai3 = a[i + 12]
-    out[0 + i] = ai0 * m00 + ai1 * m01 + ai2 * m02 + ai3 * m03
+    out[i] = ai0 * m00 + ai1 * m01 + ai2 * m02 + ai3 * m03
     out[4 + i] = ai0 * m10 + ai1 * m11 + ai2 * m12 + ai3 * m13
     out[8 + i] = ai0 * m20 + ai1 * m21 + ai2 * m22 + ai3 * m23
     out[12 + i] = ai0 * m30 + ai1 * m31 + ai2 * m32 + ai3 * m33
@@ -270,7 +270,7 @@ function GridCell () {
 
 var GRID_SIZE = 32
 var SPHERES = 16
-var SIZEOF_VERTEX = 4 * 3 + 4 * 3 + 4 * 1 + 4 * 1 // position 3f, normal 3f, color 4b, padding 4b
+var SIZEOF_VERTEX = 4 * 3 + 4 * 3 + 4 + 4 // position 3f, normal 3f, color 4b, padding 4b
 var MAX_VERTS = 40 << 10
 var MAX_VERT_BYTES = MAX_VERTS * SIZEOF_VERTEX
 
@@ -4780,7 +4780,7 @@ Simulation.prototype.updateGrid = function () {
   var sphSize = (GRID_SIZE - SPHERES) * 0.5
   for (var i = 0, ei = 0; i < SPHERES; ++i) {
     var ii = (i * 4) >>> 0
-    spheres[ii + 0] = Math.sin(this.time * (i * 0.32) + i * 0.12) * sphSize
+    spheres[ii] = Math.sin(this.time * (i * 0.32) + i * 0.12) * sphSize
     spheres[ii + 1] = Math.sin(this.time * (i * 0.25) + i * 0.7) * sphSize
     spheres[ii + 2] = Math.cos(this.time * (i * 0.1) + i * 0.4) * sphSize
     spheres[ii + 3] = 1 / (2 + 2 * (Math.sin(this.time * i * 0.3) * 0.5 + 0.5))
@@ -4795,7 +4795,7 @@ Simulation.prototype.updateGrid = function () {
         var product = 1.0
         for (var si = 0; si < SPHERES; ++si) {
           var ii = (si * 4) >>> 0
-          var dx = spheres[ii + 0] - (-GRID_SIZE * 0.5 + x)
+          var dx = spheres[ii] - (-GRID_SIZE * 0.5 + x)
           var dy = spheres[ii + 1] - (-GRID_SIZE * 0.5 + y)
           var dz = spheres[ii + 2] - (-GRID_SIZE * 0.5 + z)
           var invr = spheres[ii + 3]
@@ -5120,12 +5120,12 @@ Simulation.prototype.update = function (gl, dt) {
   gl.drawArrays(gl.TRIANGLES, 0, numVerts)
   checkGL(gl, 'draw')
 
-  //console.timeEnd('render')
+  // console.timeEnd('render')
 }
 let c = document.getElementsByTagName('canvas')[0]
 c.width = window.innerWidth
 c.height = window.innerHeight
-let gl = c.getContext('webgl', {failIfMajorPerformanceCaveat: true})
+let gl = c.getContext('webgl', {failIfMajorPerformanceCaveat: true, antialias: true})
 if (!gl) {
   alert('no webgl')
   throw Error('no webgl')
