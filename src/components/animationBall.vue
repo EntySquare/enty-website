@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <!--    <link rel="icon" type="image/png" href="/assets/favicon.png" sizes="32x32" />-->
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>EntySquare</title>
-  <link rel="icon" href="/favicon1.ico" type="image/x-icon" sizes="32x32"/>
-  <script defer type="application/javascript" src="static/metaball2.js"></script>
-</head>
+<template>
+  <div class="animationBall">
+    <div id="js-metaballs" class="hero__canvas">
+    </div>
+  </div>
+</template>
+
 <script>
-  window.addEventListener('DOMContentLoaded', function () {
-    App('home')
-  })
+export default {
+  name: 'animationBall',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
+}
 </script>
-<body style="margin: 0">
-<div id="app"></div>
-<!-- built files will be auto injected -->
-</body>
-<style>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
 
   .hero.js-reveal .hero__asset, .hero.js-reveal .hero__canvas, .js-lazy, .map.js-reveal .map__item {
     opacity: 0;
@@ -46,4 +46,3 @@
     height: 100%
   }
 </style>
-</html>

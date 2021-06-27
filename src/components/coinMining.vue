@@ -2,7 +2,8 @@
   <div  style="overflow-x: hidden;">
     <div class="container" >
       <el-row :gutter="10"  align="middle" justify="center">
-        <canvas style="height: 100%;width: 100%;position:absolute;left:0px;top:0px;z-index:-1;"></canvas>
+<!--        <canvas style="height: 100%;width: 100%;position:absolute;left:0px;top:0px;z-index:-1;"></canvas>-->
+        <animationBall></animationBall>
         <el-col :xs="1" :sm="1" :md="2" :lg="4" :xl="4">
           <div style="min-height: 36px;"></div>
         </el-col>
@@ -131,7 +132,7 @@
         </el-row>
       </el-col>
     </el-row>
-    </div>S
+    </div>
     <div class="container usageBackground">
       <el-row :gutter="10" :style="usageBackgroundImg">
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:1}" :xl="{span:6,push:4}">
@@ -192,7 +193,8 @@
 </template>
 
 <script>
-import('../assets/js/metaBall.js')
+import animationBall from './animationBall'
+
 document.body.scrollTop = document.documentElement.scrollTop = 0
 export default {
   name: 'coinMining',
@@ -213,6 +215,9 @@ export default {
         backgroundSize: '100% 100%'
       }
     }
+  },
+  components: {
+    'animationBall': animationBall
   }
 }
 </script>
@@ -665,5 +670,30 @@ export default {
   .container {
     position: relative;
     width: 100%;
+  }
+  .hero.js-reveal .hero__asset, .hero.js-reveal .hero__canvas, .js-lazy, .map.js-reveal .map__item {
+     opacity: 0;
+     -webkit-transform: scale(1.05);
+     -ms-transform: scale(1.05);
+     transform: scale(1.05)
+   }
+  .hero.js-reveal.is-visible .hero__asset, .hero.js-reveal.is-visible .hero__canvas {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    transition: opacity .3s ease-out, transform .3s cubic-bezier(.25, .46, .45, .94), -webkit-transform .3s cubic-bezier(.25, .46, .45, .94)
+  }
+  box, .browser__nav, .hero__canvas, .map, .parallax, .section {
+    overflow: hidden
+  }
+  .box__cover, .box__inner, .hero__canvas {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0
+  }
+  .hero__canvas {
+    height: 100%
   }
 </style>

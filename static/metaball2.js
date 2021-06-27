@@ -1,3 +1,4 @@
+/* eslint-disable */
 !function (e, t) {
     "use strict";
     "object" == typeof module && "object" == typeof module.exports ? module.exports = e.document ? t(e, !0) : function (e) {
@@ -2582,7 +2583,7 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
     var t = function () {
         return _gsScope.GreenSockGlobals || _gsScope
     };
-    "function" == typeof define && define.amd ? define(["TweenLite"], t) : "undefined" != typeof module && module.exports && (require("../TweenLite.js"), module.exports = t())
+   "function" == typeof define && define.amd ? define(["TweenLite"], t) : "undefined" != typeof module && module.exports && (require("../TweenLite.js"), module.exports = t())
 }();
 var _gsScope = "undefined" != typeof module && module.exports && "undefined" != typeof global ? global : this || window;
 (_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function () {
