@@ -56,11 +56,19 @@
       <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}"
               :lg="{span: '9',offset:'4'}" :xl="{span: '7',push:'0'}"
               style="font-size: 14px;font-weight: 600;color: #FFFFFF;padding-top: 20px">
-        <span style="margin-right: 20px">+Twitter</span>
-        <span style="margin-right: 20px">+Facebook</span>
+        <el-link href="https://twitter.com/EntySquare"  :underline="false" type="primary" target="_blank">
+          <span style="margin-right: 20px">+Twitter</span>
+        </el-link>
+        <el-link href="https://www.facebook.com/profile.php?id=100069820725320"  :underline="false" type="primary" target="_blank">
+          <span style="margin-right: 20px">+Facebook</span>
+        </el-link>
         <span style="margin-right: 20px">+Reddit</span>
-        <span style="margin-right: 20px">+Medium</span>
-        <span style="margin-right: 20px">+Linkedin</span>
+        <el-link href="https://medium.com/@entysquare"  :underline="false" type="primary" target="_blank">
+          <span style="margin-right: 20px">+Medium</span>
+        </el-link>
+        <el-link href="https://www.linkedin.com/in/entysquare-entysquare-a86069216/"  :underline="false" type="primary" target="_blank">
+          <span style="margin-right: 20px">+Linkedin</span>
+        </el-link>
       </el-col>
       <div style="height: 100px;background: black"></div>
     </el-row>
