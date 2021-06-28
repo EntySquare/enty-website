@@ -12,6 +12,10 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted () {
+    // eslint-disable-next-line no-undef
+    App('home')
   }
 }
 </script>
