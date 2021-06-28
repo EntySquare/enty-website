@@ -201,6 +201,8 @@ export default {
   mounted () {
     window.scroll(0, 0) // 页面加载置顶
     document.body.scrollTop = document.documentElement.scrollTop = 0
+    // eslint-disable-next-line no-undef
+    App('home')
   },
   data () {
     return {

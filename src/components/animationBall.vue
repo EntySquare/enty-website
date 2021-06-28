@@ -40,7 +40,8 @@ export default {
     position: absolute;
     left: 0;
     width: 100%;
-    top: 0
+    top: 0;
+    z-index: -1;
   }
   .hero__canvas {
     height: 100%

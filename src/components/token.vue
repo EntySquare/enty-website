@@ -4,7 +4,7 @@
   <div  style=";text-align: left;overflow-x: hidden;">
     <el-row :gutter="10">
       <el-col style="height: 800px;text-align:center;"  :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}" :lg="{span: '18',offset:'3'}" :xl="{span: '16',offset:'4'}">
-        <canvas style="height: 800px;width: 100%;position:absolute;left:0px;top:0px;z-index:-1;"></canvas>
+        <animationBall></animationBall>
         <div style="height: 20%"></div>
         <div style="font-size: 24px;;font-weight: 300;color: #000000;">
           敬请期待
@@ -461,6 +461,7 @@
 </template>
 
 <script>
+import animationBall from './animationBall'
 document.body.scrollTop = document.documentElement.scrollTop = 0
 window.scroll(0, 0) // 页面加载置顶
 window.onload = function () {
@@ -533,7 +534,6 @@ function Adaptation () {
     document.getElementById('m4_32px').style.fontSize = '12px'
   }
 }
-import('../assets/js/metaBall.js')
 export default {
   name: 'publicChain',
   // comments: {Metaballs},
@@ -555,8 +555,11 @@ export default {
   mounted () {
     window.scroll(0, 0) // 页面加载置顶
     document.body.scrollTop = document.documentElement.scrollTop = 0
+    // eslint-disable-next-line no-undef
+    App('home')
   },
   components: {
+    'animationBall': animationBall
   }
 }
 </script>
