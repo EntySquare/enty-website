@@ -44,8 +44,20 @@
             </div>
           </el-col>
           <el-col class="is-justify-center" :span="3" :push="6">
-            <el-image :src="require('../assets/rightArrow.png')"
-                      style="height: 60px; width: 60px; margin-top: 3px"></el-image>
+            <el-popover
+              placement="bottom-end"
+              width="220"
+              v-model="visible1">
+              <p>企业邮箱: terilscaub@gmail.com</p>
+              <!--                <p>联系电话: 15361445990</p>-->
+              <div style="text-align: right; margin: 0">
+                <el-button style="color: #94469B" size="mini" @click="visible1 = false">确定</el-button>
+              </div>
+              <el-image :src="require('../assets/rightArrow.png')"
+                        slot="reference"
+                        style="height: 60px; width: 60px; margin-top: 3px"></el-image>
+            </el-popover>
+
           </el-col>
         </el-row>
       </div>
@@ -370,26 +382,26 @@
     >
       <el-row>
         <router-link @click.native="drawer = false" to="/">
-          <el-col span="12" class="drawer-left-text" style=";padding: 10px 10px 10px 20px" align="left">首页</el-col>
-          <el-col span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
+          <el-col :span="12" class="drawer-left-text" style="padding: 10px 10px 10px 20px" align="left">首页</el-col>
+          <el-col :span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
         </router-link>
       </el-row>
       <el-row>
         <router-link  @click.native="drawer = false" to="/publicChain">
-          <el-col span="12" class="drawer-left-text" style=";padding: 10px 10px 10px 20px" align="left">公链</el-col>
-          <el-col span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
+          <el-col :span="12" class="drawer-left-text" style="padding: 10px 10px 10px 20px" align="left">公链</el-col>
+          <el-col :span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
         </router-link>
       </el-row>
       <el-row>
         <router-link  @click.native="drawer = false"  to="/token">
-          <el-col span="12" class="drawer-left-text" style=";padding: 10px 10px 10px 20px" align="left">代币</el-col>
-          <el-col span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
+          <el-col :span="12" class="drawer-left-text" style="padding: 10px 10px 10px 20px" align="left">代币</el-col>
+          <el-col :span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
         </router-link>
       </el-row>
       <el-row>
         <router-link  @click.native="drawer = false"  to="/coinMining">
-          <el-col span="12" class="drawer-left-text" style=";padding: 10px 10px 10px 20px" align="left">挖矿</el-col>
-          <el-col span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
+          <el-col :span="12" class="drawer-left-text" style="padding: 10px 10px 10px 20px" align="left">挖矿</el-col>
+          <el-col :span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
         </router-link>
       </el-row>
 
@@ -409,7 +421,9 @@ export default {
     return {
       menuShow: false,
       visible: false,
-      drawer: false
+      drawer: false,
+      direction: 'rtl',
+      visible1: false
     }
   },
   mounted () {
@@ -433,6 +447,9 @@ export default {
       let currentY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       this.menuShow = currentY > 60 && screen.width >= 375
       // this.menuShow = currentY > 60 && screen.width >= 750
+    },
+    handleClose (done) {
+      done()
     }
   }
 }

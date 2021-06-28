@@ -15,11 +15,11 @@
           <span style="white-space: nowrap">Smart Chain</span>
         </div>
         <div style="height: 20px"></div>
-        <div id="headFont56px"
-             style="font-size: 56px;;font-weight: 500;color: #94469B;line-height: 78px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
-          <span>构建下一代</span>
-          <span style="white-space: nowrap">去中心化支付网络</span>
-        </div>
+        <span id="headFont56px"
+             style="font-size: 56px;;font-weight: 500;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
+          <span style="">构建下一代</span>
+          <span style="white-space: nowrap;">去中心化支付网络</span>
+        </span>
         <div style="height: 20px"></div>
         <div id="headFont32px" style="font-size: 32px;;font-weight: 300;color: #000000;line-height: 45px;">
           我们的全栈产品帮助企业
@@ -74,7 +74,7 @@
 
         <div style="height: 750px">
           <el-row :gutter="10">
-            <el-col span="12" style=";padding: 20px">
+            <el-col :span="12" style=";padding: 20px">
               <!--            <div style="height: 60px;width: 60px;background: #42b983"></div>-->
               <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
               <div style="height: 20px"></div>
@@ -86,7 +86,7 @@
               </div>
               <div style="height: 100px"></div>
             </el-col>
-            <el-col span="12" style=";padding: 20px">
+            <el-col :span="12" style=";padding: 20px">
               <div>
                 <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
                 <div style="height: 20px"></div>
@@ -101,7 +101,7 @@
             </el-col>
           </el-row>
           <el-row>
-            <el-col span="12" style=";padding: 20px">
+            <el-col :span="12" style=";padding: 20px">
               <div>
                 <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
                 <div style="height: 20px"></div>
@@ -114,7 +114,7 @@
                 <div style="height: 100px"></div>
               </div>
             </el-col>
-            <el-col span="12" style=";padding: 20px">
+            <el-col :span="12" style=";padding: 20px">
               <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
               <div style="height: 20px"></div>
               <div style="font-size: 32px;;font-weight: 500;color: #000000;">
@@ -127,7 +127,7 @@
             </el-col>
           </el-row>
           <el-row>
-            <el-col span="12" style=";padding: 20px">
+            <el-col :span="12" style=";padding: 20px">
               <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
               <div style="height: 20px"></div>
               <div style="font-size: 32px;;font-weight: 500;color: #000000;">
@@ -138,7 +138,7 @@
               </div>
               <div style="height: 100px"></div>
             </el-col>
-            <el-col span="12" style=";padding: 20px">
+            <el-col :span="12" style=";padding: 20px">
               <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
               <div style="height: 20px"></div>
               <div style="font-size: 32px;;font-weight: 500;color: #000000;">

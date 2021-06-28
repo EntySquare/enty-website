@@ -62,7 +62,7 @@
 
         <div  style="height: 750px">
           <el-row :gutter="10">
-          <el-col span="12" style=";padding: 20px">
+          <el-col :span="12" style=";padding: 20px">
 <!--            <div style="height: 60px;width: 60px;background: #42b983"></div>-->
             <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
@@ -74,7 +74,7 @@
             </div>
             <div style="height: 100px"></div>
           </el-col>
-          <el-col span="12" style=";padding: 20px">
+          <el-col :span="12" style=";padding: 20px">
             <div>
               <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
@@ -89,7 +89,7 @@
           </el-col>
           </el-row>
           <el-row >
-          <el-col span="12" style=";padding: 20px">
+          <el-col :span="12" style=";padding: 20px">
             <div>
               <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
@@ -102,7 +102,7 @@
             <div style="height: 100px"></div>
             </div>
           </el-col>
-          <el-col span="12" style=";padding: 20px">
+          <el-col :span="12" style=";padding: 20px">
             <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
             <div style="font-size: 32px;;font-weight: 500;color: #000000;">
@@ -115,7 +115,7 @@
           </el-col>
           </el-row>
           <el-row >
-          <el-col span="12" style=";padding: 20px">
+          <el-col :span="12" style=";padding: 20px">
             <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
             <div style="font-size: 32px;;font-weight: 500;color: #000000;">
@@ -126,7 +126,7 @@
             </div>
             <div style="height: 100px"></div>
           </el-col>
-          <el-col span="12" style=";padding: 20px">
+          <el-col :span="12" style=";padding: 20px">
             <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
             <div style="font-size: 32px;;font-weight: 500;color: #000000;">

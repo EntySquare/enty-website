@@ -12,7 +12,7 @@
               敬请期待
             </div>
             <div class="title-text1">Entysquare</div>
-            <div style="margin: 57px 0;" class="title-text-color"><span>去中心化</span><span style="white-space: nowrap">标准算力协议</span></div>
+            <div style="margin: 57px 0;"><span class="title-text-color">去中心化标准算力协议</span></div>
             <div class="title-text2">购买算力凭证以</div>
             <div class="title-text2">赚取挖矿收益和代币奖励</div>
         </el-col>
@@ -235,7 +235,7 @@ export default {
       color: #00EAC4;
       line-height: 72px;
       text-align: center;
-      background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);
+      background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -386,7 +386,7 @@ export default {
       color: #00EAC4;
       line-height: 68px;
       text-align: center;
-      background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);
+      background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -529,7 +529,7 @@ export default {
       font-weight: 500;
       color: #00EAC4;
       line-height: 72px;
-      background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);
+      background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-align: center;
