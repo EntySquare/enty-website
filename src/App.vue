@@ -9,7 +9,6 @@ export default {
   name: 'App',
   computed: {
     key () {
-      console.log(this.$route)
       return this.$route.name !== undefined ? this.$route.name + new Date() : this.$route + new Date()
     }
   }
