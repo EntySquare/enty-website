@@ -61,7 +61,7 @@
           </el-col>
         </el-row>
       </div>
-      <div v-show="sideNaviShow" style="position:fixed;left:100px;top:360px;z-index: 5;">
+      <div v-show="sideNaviShow" class="sideNavi hidden-sm-and-down">
         <el-link class="bodyMenu" @click="jump(0)" :underline="false" type="color:gray">首页</el-link><br/>
         <el-link class="bodyMenu" @click="jump(1)" :underline="false" type="color:gray">技术</el-link><br/>
         <el-link class="bodyMenu" @click="jump(2)" :underline="false" type="color:gray">团队</el-link><br/>
@@ -238,6 +238,29 @@
             </div>
           </el-col>
         </el-row>
+        <el-row class="team-person-interval">
+          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"
+                  :xl="{span: 6, push: 4}">
+            <div class="team-person-background">
+              <el-image :src="require('../assets/wangxiaopeng.png')" class="team-person-image"></el-image>
+              <div class="team-person-name">汪晓鹏</div>
+              <div class="team-person-position">xxxxx</div>
+            </div>
+          </el-col>
+          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 4}" :md="{span: 5, push: 4}" :lg="{span: 5, push: 4}"
+                  :xl="{span: 6, push: 4}">
+            <div class="team-person-background">
+              <el-image :src="require('../assets/yuchongliang.png')" class="team-person-image"></el-image>
+              <div class="team-person-name">余崇亮</div>
+              <div class="team-person-position">xxxx</div>
+            </div>
+          </el-col>
+          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 6}" :md="{span: 5, push: 6}" :lg="{span: 5, push: 6}"
+                  :xl="{span: 6, push: 4}">
+            <div style="height: 1px;" >
+            </div>
+          </el-col>
+        </el-row>
       </div>
       <div>
         <el-row class="section">
@@ -306,7 +329,7 @@
         </el-row>
       </div>
       <div>
-        <el-row style="padding-bottom: 120px;" type="flex" align="bottom" justify="start">
+        <el-row class="sideNaviEnd" style="padding-bottom: 120px;" type="flex" align="bottom" justify="start">
           <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 10, push: 2}" :lg="{span: 2, push: 2}"
                   :xl="{span: 6, push: 4}">
             <div class="body-title5" style="color: #000000;">合作伙伴</div>
@@ -414,6 +437,7 @@
 <script>
 import Footer from '../layouts/Footer'
 document.body.scrollTop = document.documentElement.scrollTop = 0
+
 export default {
   name: 'Home',
   components: {
@@ -443,14 +467,16 @@ export default {
     scrollAnimation: function () {
       let currentY = document.documentElement.scrollTop || document.body.scrollTop
       // scrollAnimation(currentY, window.innerHeight)
-      scrollAnimationTo(currentY, screen.height)
+      scrollAnimationTo(currentY, screen.height, 20)
       this.menuShow = true
     },
     // 为了计算距离顶部的高度，当高度大于60显示回顶部图标，小于60则隐藏
     scrollToTop () {
       let currentY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       this.menuShow = currentY > 60 && screen.width >= 375
-      this.sideNaviShow = currentY > 1000 && screen.width >= 375
+      let jump = document.getElementsByClassName('sideNaviEnd')
+      let target = jump[0].offsetTop + 100
+      this.sideNaviShow = currentY > 1000 && currentY < target && screen.width >= 375
     },
     handleClose (done) {
       done()
@@ -459,23 +485,30 @@ export default {
       let jump = document.getElementsByClassName('section')
       // 获取需要滚动的距离
       // offset 的设定针对页脚定位的情况，如果在当前页面，则传0
-      let target = jump[index].offsetTop + offset
+      let targetY = jump[index].offsetTop + offset
       let currentY = document.documentElement.scrollTop || document.body.scrollTop
       // 由于页脚定位滑动较慢，则手动传入这个参数，此参数越大，滑动得越慢
-      scrollAnimationTo(currentY, target, splitTimes)
+      // console.log(currentY + '=>' + targetY + ',' + splitTimes)
+      scrollAnimationTo(currentY, targetY, splitTimes)
     },
     footerJump () {
       var href = window.location.href
       if (href.indexOf('?') > -1) {
         var index = href.split('?')[1].split('&')[0].split('=')[1]
         // offset设置503px （不知道为什么有这个偏移量）
-        this.jump(index, 503, 5)
+        let docWidth = document.body.clientWidth.valueOf()
+        // console.log(docWidth)
+        if (docWidth >= 1920) {
+          this.jump(index, 503, 5)
+        } else {
+          this.jump(index, 0, 5)
+        }
       }
     }
   }
 }
 function scrollAnimationTo (currentY, targetY, splitTimes) {
-  // console.log(currentY + '=>' + targetY + ',' + splitTimes)
+  console.log(currentY + '=>' + targetY + ',' + splitTimes)
   // 获取当前位置方法
   // const currentY = document.documentElement.scrollTop || document.body.scrollTop
   // 计算需要移动的距离
@@ -524,7 +557,6 @@ a {
 
 /*移动端样式*/
 @media screen and (max-width: 767px) {
-
   .headBackground {
     height: 250px;
     width: 319px;
@@ -681,7 +713,7 @@ a {
   .team-person-totalBack {
     background-color: black;
     width: 100%;
-    height: 750px;
+    height: 960px;
   }
 
   .team-person-background {
@@ -979,7 +1011,7 @@ a {
   .team-person-totalBack {
     background-color: black;
     width: 100%;
-    height: 960px;
+    height: 1260px;
   }
 
   .team-person-background {
@@ -1119,6 +1151,12 @@ a {
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+  .sideNavi{
+    position:fixed;
+    z-index: 5;
+    left:25px;
+    top:260px;
+  }
   .headBackground {
     height: 500px;
     width: 650px;
@@ -1277,7 +1315,7 @@ a {
   .team-person-totalBack {
     background-color: black;
     width: 100%;
-    height: 960px;
+    height: 1260px;
   }
 
   .team-person-background {
@@ -1416,6 +1454,12 @@ a {
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
+  .sideNavi{
+    position:fixed;
+    z-index: 5;
+    left:30px;
+    top:360px;
+  }
   .headBackground {
     height: 600px;
     width: 751px;
@@ -1574,7 +1618,7 @@ a {
   .team-person-totalBack {
     background-color: black;
     width: 100%;
-    height: 1300px;
+    height: 1800px;
   }
 
   .team-person-background {
@@ -1714,6 +1758,12 @@ a {
 
 /*适配web端*/
 @media screen and (min-width: 1920px) {
+  .sideNavi{
+    position:fixed;
+    z-index: 5;
+    left:70px;
+    top:360px;
+  }
   .headBackground {
     height: auto;
     width: 1360px;
@@ -1869,7 +1919,7 @@ a {
   .team-person-totalBack {
     background-color: black;
     width: 100%;
-    height: 1712px;
+    height: 2240px;
   }
 
   .team-person-background {

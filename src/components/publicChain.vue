@@ -357,16 +357,14 @@
 import animationBall from './animationBall'
 window.scroll(0, 0) // 页面加载置顶
 document.body.scrollTop = document.documentElement.scrollTop = 0
-window.onload = function () {
-  Adaptation()
-}
+
 window.onresize = function () {
   Adaptation()
 }
 
 function Adaptation () {
   let docWidth = document.body.clientWidth.valueOf()
-  console.log(docWidth)
+  // console.log(docWidth)
   if (docWidth <= 423) {
     document.getElementById('font_64px').style.fontSize = '50px'
     document.getElementById('font_28px').style.fontSize = '20px'
@@ -389,6 +387,7 @@ export default {
   mounted () {
     window.scroll(0, 0) // 页面加载置顶
     document.body.scrollTop = document.documentElement.scrollTop = 0
+    Adaptation()
   },
   destroyed () {
     let c = document.getElementById('canvas-ball')

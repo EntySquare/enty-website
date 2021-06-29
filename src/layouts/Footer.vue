@@ -10,19 +10,19 @@
           </div>
         </div>
         <div style="padding-bottom: 32px">
-          <el-link href="#/?index=0" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>首页</span><span style="float:right">+</span></el-link>
+          <el-link  @click="goArea(0)" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>首页</span><span style="float:right">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <el-link href="#/?index=1" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>技术</span><span style="float:right">+</span></el-link>
+          <el-link  @click="goArea(1)" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>技术</span><span style="float:right">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <el-link href="#/?index=2" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>团队</span><span style="float:right">+</span></el-link>
+          <el-link  @click="goArea(2)" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>团队</span><span style="float:right">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <el-link href="#/?index=3" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>博客</span><span style="float:right">+</span></el-link>
+          <el-link  @click="goArea(3)" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>博客</span><span style="float:right">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <el-link href="#/?index=4" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>关于</span><span style="float:right">+</span></el-link>
+          <el-link  @click="goArea(4)" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>关于</span><span style="float:right">+</span></el-link>
         </div>
       </el-col>
       <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}"
@@ -79,7 +79,12 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  methods: {
+    goArea (index) {
+      window.location.href = '#/?index=' + index + '&date' + new Date().getTime()
+    }
+  }
 }
 </script>
 

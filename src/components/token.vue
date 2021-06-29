@@ -464,9 +464,6 @@
 import animationBall from './animationBall'
 document.body.scrollTop = document.documentElement.scrollTop = 0
 window.scroll(0, 0) // 页面加载置顶
-window.onload = function () {
-  Adaptation()
-}
 window.onresize = function () {
   Adaptation()
 }
@@ -555,6 +552,7 @@ export default {
   mounted () {
     window.scroll(0, 0) // 页面加载置顶
     document.body.scrollTop = document.documentElement.scrollTop = 0
+    Adaptation()
   },
   components: {
     'animationBall': animationBall
