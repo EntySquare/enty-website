@@ -3,26 +3,26 @@
     <el-row style="background: black;text-align: left">
       <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}"
               :lg="{span: '2',offset:'3'}" :xl="{span: '1',push:'1'}"
-              style=";font-size: 28px;font-weight: 600;color: #FFFFFF;">
+              style="font-size: 28px;font-weight: 600;color: #FFFFFF;">
         <div style="height: 61px"></div>
         <div class="hidden-md-and-down">
           <div style="height: 100px">
           </div>
         </div>
         <div style="padding-bottom: 32px">
-          <span>首页</span><span style="float:right">+</span>
+          <el-link href="#/?index=0" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>首页</span><span style="float:right">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <span>技术</span><span style="float:right">+</span>
+          <el-link href="#/?index=1" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>技术</span><span style="float:right">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <span>博客</span><span style="float:right">+</span>
+          <el-link href="#/?index=2" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>团队</span><span style="float:right">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <span>团队</span><span style="float:right">+</span>
+          <el-link href="#/?index=3" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>博客</span><span style="float:right">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <span>关于</span><span style="float:right">+</span>
+          <el-link href="#/?index=4" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>关于</span><span style="float:right">+</span></el-link>
         </div>
       </el-col>
       <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}"

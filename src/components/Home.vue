@@ -61,6 +61,13 @@
           </el-col>
         </el-row>
       </div>
+      <div v-show="sideNaviShow" style="position:fixed;left:100px;top:360px;z-index: 5;">
+        <el-link class="bodyMenu" @click="jump(0)" :underline="false" type="color:gray">首页</el-link><br/>
+        <el-link class="bodyMenu" @click="jump(1)" :underline="false" type="color:gray">技术</el-link><br/>
+        <el-link class="bodyMenu" @click="jump(2)" :underline="false" type="color:gray">团队</el-link><br/>
+        <el-link class="bodyMenu" @click="jump(3)" :underline="false" type="color:gray">博客</el-link><br/>
+        <el-link class="bodyMenu" @click="jump(4)" :underline="false" type="color:gray">关于</el-link><br/>
+      </div>
       <el-col :xs="12" :sm="12" :md="0" :lg="0" :xl="0" v-show="menuShow">
         <div class="" style="height: 66px;width: 100%;background: #FFFFFF;position: fixed; z-index: 99">
           <router-link to="/" style="float: left">
@@ -73,9 +80,9 @@
           </el-button>
         </div>
       </el-col>
-      <el-row>
-        <el-col :xs="{span: 22, push: 2}" :sm="{span: 22, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
-                :xl="{span: 2, push: 1}">
+      <el-row class="section">
+        <el-col :xs="{span: 22, push: 2}" :sm="{span: 22, push: 2}" :md="{span: 3, push: 1}" :lg="{span: 3, push: 1}"
+                :xl="{span: 3, push: 2}">
           <div style="height: 96px; width: 235px; padding-top: 48px" @click="scrollAnimation()">
             <el-image :src="require('../assets/entyLogo.png')"></el-image>
           </div>
@@ -97,11 +104,7 @@
         <el-col class="hidden-sm-and-down" :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}"
                 :lg="{span: 2, push: 2}"
                 :xl="{span: 2, push: 1}">
-          <div class="bodyMenu">首页</div>
-          <div class="bodyMenu">技术</div>
-          <div class="bodyMenu">博客</div>
-          <div class="bodyMenu">团队</div>
-          <div class="bodyMenu">关于</div>
+          <div style="min-height: 36px;"></div>
         </el-col>
         <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 12, push: 7}" :lg="{span: 12, push: 7}"
                 :xl="{span: 13, push: 5}">
@@ -136,7 +139,7 @@
           <div class="bodyText1">EntySquare网络正在使区块链应用程序变得通用，从而提供无与伦比的用户覆盖率和使用率。EntySquare分散且可持续发展，旨在为所有商业创造价值。</div>
         </el-col>
       </el-row>
-      <el-row>
+      <el-row class="section">
         <el-col :xs="{span: 20, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
                 :xl="{span: 2, push: 4}">
           <div class="bodyTitle2">优势</div>
@@ -176,7 +179,7 @@
         </el-col>
       </el-row>
       <div class="team-person-totalBack">
-        <el-row>
+        <el-row class="section">
           <el-col :xs="{span: 20, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 8, push: 2}" :lg="{span: 8, push: 2}"
                   :xl="{span: 6, push: 4}">
             <div class="body-title5">核心团队</div>
@@ -237,7 +240,7 @@
         </el-row>
       </div>
       <div>
-        <el-row>
+        <el-row class="section">
           <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
                   :xl="{span: 6, push: 4}">
             <div class="body-title5" style="padding-top: 150px; padding-bottom: 120px; color: #000000">博客资讯</div>
@@ -337,7 +340,7 @@
         </el-row>
       </div>
       <div class="home-footer-size">
-        <el-row>
+        <el-row class="section">
           <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 10, push: 2}" :lg="{span: 6, push: 2}"
                   :xl="{span: 6, push: 4}">
             <div class="home-footer-title">做全球化的推动者和连接者</div>
@@ -404,7 +407,6 @@
           <el-col :span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
         </router-link>
       </el-row>
-
     </el-drawer>
   </el-container>
 </template>
@@ -423,7 +425,8 @@ export default {
       visible: false,
       drawer: false,
       direction: 'rtl',
-      visible1: false
+      visible1: false,
+      sideNaviShow: false
     }
   },
   mounted () {
@@ -431,6 +434,7 @@ export default {
 
     window.addEventListener('scroll', this.scrollToTop)
     this.scrollToTop()
+    this.footerJump() // 处理来自页脚的滑块定位
   },
   destroyed () {
     window.removeEventListener('scroll', this.scrollToTop)
@@ -446,15 +450,32 @@ export default {
     scrollToTop () {
       let currentY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       this.menuShow = currentY > 60 && screen.width >= 375
-      // this.menuShow = currentY > 60 && screen.width >= 750
+      this.sideNaviShow = currentY > 1000 && screen.width >= 375
     },
     handleClose (done) {
       done()
+    },
+    jump (index, offset = 0, splitTimes = 20) {
+      let jump = document.getElementsByClassName('section')
+      // 获取需要滚动的距离
+      // offset 的设定针对页脚定位的情况，如果在当前页面，则传0
+      let target = jump[index].offsetTop + offset
+      let currentY = document.documentElement.scrollTop || document.body.scrollTop
+      // 由于页脚定位滑动较慢，则手动传入这个参数，此参数越大，滑动得越慢
+      scrollAnimationTo(currentY, target, splitTimes)
+    },
+    footerJump () {
+      var href = window.location.href
+      if (href.indexOf('?') > -1) {
+        var index = href.split('?')[1].split('&')[0].split('=')[1]
+        // offset设置503px （不知道为什么有这个偏移量）
+        this.jump(index, 503, 5)
+      }
     }
   }
 }
-
-function scrollAnimationTo (currentY, targetY) {
+function scrollAnimationTo (currentY, targetY, splitTimes) {
+  // console.log(currentY + '=>' + targetY + ',' + splitTimes)
   // 获取当前位置方法
   // const currentY = document.documentElement.scrollTop || document.body.scrollTop
   // 计算需要移动的距离
@@ -462,12 +483,18 @@ function scrollAnimationTo (currentY, targetY) {
   let _currentY = currentY
   setTimeout(() => {
     // 一次调用滑动帧数，每次调用会不一样
-    const dist = Math.ceil(needScrollTop / 50)
+    var dist = 0
+    if (needScrollTop < 0) {
+      // ceil函数在对于大于-1小于0的数时，算出的结果0，会一直递归，需要特殊处理
+      dist = -1 * Math.ceil(-1 * needScrollTop / splitTimes)
+    } else {
+      dist = Math.ceil(needScrollTop / splitTimes) // ceil函数在needScrollTop>-9时，算出的dist=0，所以会一直卡死在这
+    }
     _currentY += dist
     window.scrollTo(0, currentY - 96)
     // 如果移动幅度小于十个像素，直接移动，否则递归调用，实现动画效果
     if (needScrollTop > 1 || needScrollTop < -1) {
-      scrollAnimationTo(_currentY, targetY)
+      scrollAnimationTo(_currentY, targetY, splitTimes)
     } else {
       window.scrollTo(0, targetY - 96)
     }
@@ -1688,7 +1715,7 @@ a {
 /*适配web端*/
 @media screen and (min-width: 1920px) {
   .headBackground {
-    height: 100vh;
+    height: auto;
     width: 1360px;
   }
   .headFont {
