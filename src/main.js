@@ -20,3 +20,13 @@ new Vue({
   components: {App},
   template: '<App/>'
 })
+
+router.beforeEach((to, from, next) => {
+  // eslint-disable-next-line eqeqeq
+  if (from.path == '/publicChain' || from.path == '/token' || from.path == '/coinMining') {
+    from.meta.keepAlive = false
+    next()
+  } else {
+    next()
+  }
+})
