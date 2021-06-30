@@ -25,13 +25,13 @@
       <el-row :gutter="10">
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:2}" :xl="{span:6,push:4}">
           <div style="margin-top:50px" class="title-text3">Entysquare
-            <div style="width: 108px;height: 16px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);z-index: -1;margin-top:-10px;position:relative;"></div>
+            <div style="width: 108px;height: 10px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);z-index: -1;margin-top:-15px;position:relative;"></div>
           </div>
           <div class="title-text3">是将矿机算力标准化
-            <div style="width: 246px;height: 16px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);z-index: -1;margin-top:-10px;position:relative;"></div>
+            <div style="width: 246px;height: 10px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);z-index: -1;margin-top:-15px;position:relative;"></div>
           </div>
           <div class="title-text3">的DeFi挖矿协议
-            <div style="width: 188px;height: 16px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);z-index: -1;margin-top:-10px;position:relative;"></div>
+            <div style="width: 188px;height: 10px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);z-index: -1;margin-top:-15px;position:relative;"></div>
           </div>
         </el-col>
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:6}" :xl="{span:6,push:8}">
@@ -141,11 +141,13 @@
           </div>
         </el-col>
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:6}" :xl="{span:8,push:8}">
-          <div style="margin-top: 215px;overflow: hidden" class="title-text5">我们通过算法能
-            <div style="width: 312px;height: 16px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);z-index: -1;margin-top: -10px;position: relative;left: 140px;"></div>
+          <div style="margin-top: 215px;overflow: hidden;" class="title-text5"><span style="z-index:999">我们通过算法能</span>
+            <div class="hidden-xs-only" style="width: 312px;height: 10px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);margin-top: -12px;position: relative;left: 140px;z-index: 1"></div>
+            <div class="hidden-sm-and-up" style="width: 150px;height: 10px;background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 52%, #94469B 100%);margin-top: -12px;position: relative;left: 100px;z-index: 1"></div>
           </div>
-          <div style="" class="title-text5">挖什么币
-            <div style="width: 188px;height: 16px;background: linear-gradient(90deg, #94469B 0%, #D32254 100%);position:relative;z-index: -1;margin-top: -10px"></div>
+          <div class="title-text5"><span style="z-index: 999">挖什么币</span>
+            <div class="hidden-xs-only"  style="width: 188px;height: 10px;background: linear-gradient(90deg, #94469B 0%, #D32254 100%);position:relative;margin-top: -12px;z-index: 1"></div>
+            <div class="hidden-sm-and-up"  style="width: 120px;height: 10px;background: linear-gradient(90deg, #94469B 0%, #D32254 100%);position:relative;margin-top: -12px;z-index: 1"></div>
           </div>
           <div style="margin-top: 114px" class="content-text2">我们的挖矿专家和算法交易框架拥有对加密货币的专业性。您可以通过我们的挖矿页面直接挖取SHA-256合约-BTC、Ethash合约-ETH和各种代币。可以挖取的加密货币取决于您选择的合约。</div>
           <div style="height: 140px;margin-top: 96px;">
@@ -375,7 +377,7 @@ export default {
     }
     .coinCardSet{
       width: 590px;
-      height:954px;
+      height:auto;
     }
   }
 

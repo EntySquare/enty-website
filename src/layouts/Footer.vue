@@ -10,19 +10,24 @@
           </div>
         </div>
         <div style="padding-bottom: 32px">
-          <el-link  @click="goArea(0)" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>首页</span><span style="float:right">+</span></el-link>
+          <el-link  @click="goArea(0)" :underline="false" class="a-tag-color" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span class="a-tag-color">首页</span><span class="hidden-xs-only">&nbsp;+</span>
+            <span class="hidden-sm-and-up" style="position: absolute;left: 320px;">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <el-link  @click="goArea(1)" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>技术</span><span style="float:right">+</span></el-link>
+          <el-link  @click="goArea(1)" :underline="false" class="a-tag-color" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span class="a-tag-color">技术</span><span class="hidden-xs-only">&nbsp;+</span>
+            <span class="hidden-sm-and-up" style="position: absolute;left: 320px;">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <el-link  @click="goArea(2)" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>团队</span><span style="float:right">+</span></el-link>
+          <el-link  @click="goArea(2)" :underline="false" class="a-tag-color" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span class="a-tag-color">团队</span><span class="hidden-xs-only">&nbsp;+</span>
+            <span class="hidden-sm-and-up" style="position: absolute;left: 320px;">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <el-link  @click="goArea(3)" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>博客</span><span style="float:right">+</span></el-link>
+          <el-link  @click="goArea(3)" :underline="false" class="a-tag-color" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span class="a-tag-color">博客</span><span class="hidden-xs-only">&nbsp;+</span>
+            <span class="hidden-sm-and-up" style="position: absolute;left: 320px;">+</span></el-link>
         </div>
         <div style="padding-bottom: 32px">
-          <el-link  @click="goArea(4)" :underline="false" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span>关于</span><span style="float:right">+</span></el-link>
+          <el-link  @click="goArea(4)" :underline="false" class="a-tag-color" style="font-size: 28px;font-weight: 600;color: #FFFFFF;"><span class="a-tag-color">关于</span><span class="hidden-xs-only">&nbsp;+</span>
+            <span class="hidden-sm-and-up" style="position: absolute;left: 320px;">+</span></el-link>
         </div>
       </el-col>
       <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '18',offset:'3'}"
@@ -93,6 +98,5 @@ export default {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
   Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-.a-tag-color:hover {color:dodgerblue;}  /* 鼠标移动到链接上 */
-.a-tag-color:active {color:#ff00ff;}  /* 鼠标点击时 */
+.a-tag-color:hover {color:#94469B;}  /* 鼠标移动到链接上 */
 </style>

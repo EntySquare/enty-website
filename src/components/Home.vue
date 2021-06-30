@@ -62,11 +62,11 @@
         </el-row>
       </div>
       <div v-show="sideNaviShow" class="sideNavi hidden-sm-and-down">
-        <el-link class="bodyMenu" @click="jump(0)" :underline="false" type="color:gray">首页</el-link><br/>
-        <el-link class="bodyMenu" @click="jump(1)" :underline="false" type="color:gray">技术</el-link><br/>
-        <el-link class="bodyMenu" @click="jump(2)" :underline="false" type="color:gray">团队</el-link><br/>
-        <el-link class="bodyMenu" @click="jump(3)" :underline="false" type="color:gray">博客</el-link><br/>
-        <el-link class="bodyMenu" @click="jump(4)" :underline="false" type="color:gray">关于</el-link><br/>
+        <el-link class="a-tag-color" @click="jump(0)" :underline="false">首页</el-link><br/>
+        <el-link class="a-tag-color" @click="jump(1)" :underline="false">技术</el-link><br/>
+        <el-link class="a-tag-color" @click="jump(2)" :underline="false">团队</el-link><br/>
+        <el-link class="a-tag-color" @click="jump(3)" :underline="false">博客</el-link><br/>
+        <el-link class="a-tag-color" @click="jump(4)" :underline="false">关于</el-link><br/>
       </div>
       <el-col :xs="12" :sm="12" :md="0" :lg="0" :xl="0" v-show="menuShow">
         <div class="" style="height: 66px;width: 100%;background: #FFFFFF;position: fixed; z-index: 99">
@@ -180,7 +180,7 @@
       </el-row>
       <div class="team-person-totalBack">
         <el-row class="section">
-          <el-col :xs="{span: 20, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 8, push: 2}" :lg="{span: 8, push: 2}"
+          <el-col :xs="{span: 20, push: 1}" :sm="{span: 2, push: 2}" :md="{span: 8, push: 2}" :lg="{span: 8, push: 2}"
                   :xl="{span: 6, push: 4}">
             <div class="body-title5">核心团队</div>
             <div class="team-text" style="padding-bottom: 80px">来自分布式计算、金融交易、区块链共识设计和跨链等各领域经验丰富的资深人士</div>
@@ -244,7 +244,7 @@
             <div class="team-person-background">
               <el-image :src="require('../assets/wangxiaopeng.png')" class="team-person-image"></el-image>
               <div class="team-person-name">汪晓鹏</div>
-              <div class="team-person-position">xxxxx</div>
+              <div class="team-person-position">金融解决方案架构师</div>
             </div>
           </el-col>
           <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 4}" :md="{span: 5, push: 4}" :lg="{span: 5, push: 4}"
@@ -252,12 +252,15 @@
             <div class="team-person-background">
               <el-image :src="require('../assets/yuchongliang.png')" class="team-person-image"></el-image>
               <div class="team-person-name">余崇亮</div>
-              <div class="team-person-position">xxxx</div>
+              <div class="team-person-position">高级合伙人</div>
             </div>
           </el-col>
           <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 6}" :md="{span: 5, push: 6}" :lg="{span: 5, push: 6}"
                   :xl="{span: 6, push: 4}">
-            <div style="height: 1px;" >
+            <div class="team-person-background">
+              <el-image :src="require('../assets/wangyi1.png')" class="team-person-image"></el-image>
+              <div class="team-person-name">王易</div>
+              <div class="team-person-position">全球研究中心主任</div>
             </div>
           </el-col>
         </el-row>
@@ -2059,4 +2062,12 @@ a {
   font-weight: 500;
   color: #000000;
 }
+.a-tag-color{
+  font-size: 16px;
+  font-weight: 500;
+  color: #626262;
+  line-height: 32px;
+}
+.a-tag-color:link {color: grey}
+.a-tag-color:hover {color:#94469B;}  /* 鼠标移动到链接上 */
 </style>
