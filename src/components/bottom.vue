@@ -30,7 +30,7 @@
           <div style="height: 130px">
           </div>
         </div>
-        <img src="@/assets/entyColourLogo.png" style="height: 40px;width: auto;">
+        <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/entyColourLogo.png" style="height: 40px;width: auto;">
         <div style="height: 41px"></div>
         <div style="font-size: 14px;font-family: PingFang-SC-Medium, PingFang-SC;font-weight: 500;color: #FFFFFF;">
         作为全球性区块链技术平台，Entysquare 致力于推动去中心化的商业运用。公司于 2020 年在中国深圳成立。

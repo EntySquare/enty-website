@@ -9,7 +9,7 @@
         <div style="font-size: 24px;;font-weight: 300;color: #000000;">
           敬请期待
         </div>
-        <img src="@/assets/eseTokenText.png" style="height: auto;width: 60%;max-width: 1000px;min-width: 305px">
+        <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/eseTokenText.png" style="height: auto;width: 60%;max-width: 1000px;min-width: 305px">
         <div style="height: 20px"></div>
         <div style="height: 20px"></div>
         <div id="headFont48px" style="font-size: 48px;;font-weight: 300;color: #000000;line-height: 78px;">
@@ -64,7 +64,7 @@
           <el-row :gutter="10">
           <el-col :span="12" style=";padding: 20px">
 <!--            <div style="height: 60px;width: 60px;background: #42b983"></div>-->
-            <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+            <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
             <div style="font-size: 32px;;font-weight: 500;color: #000000;">
               算力通证
@@ -76,7 +76,7 @@
           </el-col>
           <el-col :span="12" style=";padding: 20px">
             <div>
-              <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+              <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
             <div style="font-size: 32px;;font-weight: 500;color: #000000;">
               放样
@@ -91,7 +91,7 @@
           <el-row >
           <el-col :span="12" style=";padding: 20px">
             <div>
-              <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+              <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
             <div style="font-size: 32px;;font-weight: 500;color: #000000;">
               权益奖励
@@ -103,7 +103,7 @@
             </div>
           </el-col>
           <el-col :span="12" style=";padding: 20px">
-            <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+            <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
             <div style="font-size: 32px;;font-weight: 500;color: #000000;">
               治理
@@ -116,7 +116,7 @@
           </el-row>
           <el-row >
           <el-col :span="12" style=";padding: 20px">
-            <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+            <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
             <div style="font-size: 32px;;font-weight: 500;color: #000000;">
               操作
@@ -127,7 +127,7 @@
             <div style="height: 100px"></div>
           </el-col>
           <el-col :span="12" style=";padding: 20px">
-            <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+            <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
             <div style="height: 20px"></div>
             <div style="font-size: 32px;;font-weight: 500;color: #000000;">
               链上治理
@@ -186,7 +186,7 @@
         <el-col :xs="{span: '12',push :'3'}" :sm="{span: '9',push:'4'}" :md="{span: '10',push:'4'}" :lg="{span: '10',push:'4'}" :xl="{span: '8',push:'6'}" style="text-align:center;">
     <div style="height: 50px">
     </div>
-    <img id="proportionalSpherePng" src="@/assets/proportionalSphere.png" style="height: auto;width: 100%;max-width: 500px;min-width: 200px">
+    <img id="proportionalSpherePng" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/proportionalSphere.png" style="height: auto;width: 100%;max-width: 500px;min-width: 200px">
           <div style="height: 100px"></div>
         </el-col>
         <el-col :xs="{span: '3',push :'3'}" :sm="{span: '3',push:'5'}" :md="{span: '3',push:'5'}" :lg="{span: '3',push:'5'}" :xl="{span: '2',push:'8'}" style="text-align: left">
@@ -279,16 +279,16 @@
           <div style="height: 100px"></div>
           <el-row style="">
             <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6" style="padding: 20px">
-              <img src="@/assets/cooperation1.png" style="height: auto;width: 100%">
+              <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/cooperation1.png" style="height: auto;width: 100%">
             </el-col>
             <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6" style="padding: 20px">
-              <img src="@/assets/cooperation2.png" style="height: auto;width: 100%">
+              <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/cooperation2.png" style="height: auto;width: 100%">
             </el-col>
             <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6" style="padding: 20px">
-              <img src="@/assets/cooperation3.png" style="height: auto;width: 100%">
+              <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/cooperation3.png" style="height: auto;width: 100%">
             </el-col>
             <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6" style="padding: 20px">
-              <img src="@/assets/cooperation4.png" style="height: auto;width: 100%">
+              <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/cooperation4.png" style="height: auto;width: 100%">
             </el-col>
           </el-row>
         </el-col>
@@ -536,17 +536,17 @@ export default {
   // comments: {Metaballs},
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      floatingBalloonPng: {
-        backgroundImage: 'url(' + require('@/assets/floatingBalloon.png') + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%'
-      },
-      purpleCurvePng: {
-        backgroundImage: 'url(' + require('@/assets/purpleCurve.png') + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%'
-      }
+      msg: 'Welcome to Your Vue.js App'
+      // floatingBalloonPng: {
+      //   backgroundImage: 'url(' + require('https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/floatingBalloon.png') + ')',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundSize: '100% 100%'
+      // },
+      // purpleCurvePng: {
+      //   backgroundImage: 'url(' + require('https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/purpleCurve.png') + ')',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundSize: '100% 100%'
+      // }
     }
   },
   mounted () {

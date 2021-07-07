@@ -50,7 +50,7 @@
           <el-col :span="11" :push="1" >
             <div style="height:300px; margin-top: 50px;">
               <div style="height:120px;text-align: left">
-                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
+                <img style="width: 80px;height: 80px;" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 每日挖矿产出
@@ -63,7 +63,7 @@
           <el-col :span="11" :push="2" >
             <div style="height:300px;margin-top: 50px;">
               <div style="height:120px;text-align: left">
-                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
+                <img style="width: 80px;height: 80px;" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 先进的挖矿技术
@@ -78,7 +78,7 @@
           <el-col :span="11" :push="1">
             <div style="height:300px;">
               <div style="height:120px;text-align: left">
-                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
+                <img style="width: 80px;height: 80px;" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 多币种挖矿
@@ -91,7 +91,7 @@
           <el-col :span="11" :push="2">
             <div style="height:300px;">
               <div style="height:120px;text-align: left">
-                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
+                <img style="width: 80px;height: 80px;" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 安全透明
@@ -106,7 +106,7 @@
           <el-col :span="11" :push="1">
             <div style="height:300px;">
               <div style="height:120px;text-align: left">
-                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
+                <img style="width: 80px;height: 80px;" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 自由交易
@@ -119,7 +119,7 @@
           <el-col :span="11" :push="2">
             <div style="height:300px;">
               <div style="height:120px;text-align: left">
-                <img style="width: 80px;height: 80px;" src="@/assets/icon1.png">
+                <img style="width: 80px;height: 80px;" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/icon1.png">
               </div>
               <div class="sub-title-text1">
                 真实算力
@@ -137,7 +137,7 @@
       <el-row :gutter="10" :style="usageBackgroundImg">
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:1}" :xl="{span:6,push:4}">
           <div style="margin-top:148px;">
-            <img class="coinCardSet" src="@/assets/coinCardSet.png">
+            <img class="coinCardSet" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/coinCardSet.png">
           </div>
         </el-col>
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:6}" :xl="{span:8,push:8}">
@@ -152,7 +152,7 @@
           <div style="margin-top: 114px" class="content-text2">我们的挖矿专家和算法交易框架拥有对加密货币的专业性。您可以通过我们的挖矿页面直接挖取SHA-256合约-BTC、Ethash合约-ETH和各种代币。可以挖取的加密货币取决于您选择的合约。</div>
           <div style="height: 140px;margin-top: 96px;">
             <div style="height: 74px;width: 74px;position: absolute;margin-top: 13px;">
-              <img style="width: 74px;height:74px;" src="@/assets/icon2.png">
+              <img style="width: 74px;height:74px;" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/icon2.png">
             </div>
             <div class="sub-title-text2" style="position: relative;left:118px;">
               自动计算
@@ -163,7 +163,7 @@
           </div>
           <div style="height: 140px;position:relative;margin-top:60px">
             <div style="height: 74px;width: 74px;position: absolute;margin-top: 13px;">
-              <img style="width: 74px;height:74px;" src="@/assets/icon3.png">
+              <img style="width: 74px;height:74px;" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/icon3.png">
             </div>
             <div class="sub-title-text2"  style="position: relative;left:118px;">
               算力凭证
@@ -206,16 +206,16 @@ export default {
   },
   data () {
     return {
-      loatingBalloonPng: {
-        backgroundImage: 'url(' + require('@/assets/floatingBalloon.png') + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%'
-      },
-      usageBackgroundImg: {
-        backgroundImage: 'url(' + require('@/assets/usageBackground.png') + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%'
-      }
+      // loatingBalloonPng: {
+      //   backgroundImage: 'url(https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/floatingBalloon.png)',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundSize: '100% 100%'
+      // },
+      // usageBackgroundImg: {
+      //   backgroundImage: 'url(https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/usageBackground.png)',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundSize: '100% 100%'
+      // }
     }
   },
   components: {

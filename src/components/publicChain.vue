@@ -76,7 +76,7 @@
           <el-row :gutter="10">
             <el-col :span="12" style=";padding: 20px">
               <!--            <div style="height: 60px;width: 60px;background: #42b983"></div>-->
-              <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+              <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
               <div style="height: 20px"></div>
               <div style="font-size: 32px;;font-weight: 500;color: #000000;">
                 扩展性
@@ -88,7 +88,7 @@
             </el-col>
             <el-col :span="12" style=";padding: 20px">
               <div>
-                <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+                <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
                 <div style="height: 20px"></div>
                 <div style="font-size: 32px;;font-weight: 500;color: #000000;">
                   多样性
@@ -103,7 +103,7 @@
           <el-row>
             <el-col :span="12" style=";padding: 20px">
               <div>
-                <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+                <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
                 <div style="height: 20px"></div>
                 <div style="font-size: 32px;;font-weight: 500;color: #000000;">
                   安全性
@@ -115,7 +115,7 @@
               </div>
             </el-col>
             <el-col :span="12" style=";padding: 20px">
-              <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+              <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
               <div style="height: 20px"></div>
               <div style="font-size: 32px;;font-weight: 500;color: #000000;">
                 互操作性
@@ -128,7 +128,7 @@
           </el-row>
           <el-row>
             <el-col :span="12" style=";padding: 20px">
-              <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+              <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
               <div style="height: 20px"></div>
               <div style="font-size: 32px;;font-weight: 500;color: #000000;">
                 去中心化存储
@@ -139,7 +139,7 @@
               <div style="height: 100px"></div>
             </el-col>
             <el-col :span="12" style=";padding: 20px">
-              <img src="@/assets/doubleSphere.png" style="height: 90px;width: auto">
+              <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png" style="height: 90px;width: auto">
               <div style="height: 20px"></div>
               <div style="font-size: 32px;;font-weight: 500;color: #000000;">
                 智能合约
@@ -155,7 +155,7 @@
     </el-row>
 
     <div style="height: 700px;width: 100%;" :style="purpleCurvePng">
-      <!--      <img src="@/assets/purpleCurve.png" style="height: 700px;width: 100%;z-index: -1;position:absolute;">-->
+      <!--      <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/purpleCurve.png" style="height: 700px;width: 100%;z-index: -1;position:absolute;">-->
       <el-row :gutter="10">
         <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '22',push:'2'}" :md="{span: '19',push:'3'}"
                 :lg="{span: '8',push:'3'}" :xl="{span: '8',push:'2',offset:'2'}"
@@ -216,7 +216,7 @@
       </el-col>
       <el-col :xs="{span: '22',push:'1'}" :sm="{span: '20',push:'2'}" :md="{span: '18',push:'3'}"
               :lg="{span: '8',push:'7'}" :xl="{span: '6',push:'5'}">
-        <img src="@/assets/solution.png" style="height: auto;width: 100%;float:right ">
+        <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/solution.png" style="height: auto;width: 100%;float:right ">
       </el-col>
     </el-row>
     <div style="height: 126px"></div>
@@ -332,7 +332,7 @@
         </el-col>
         <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '12',offset:'3'}"
                 :lg="{span: '14',offset:'1'}" :xl="{span: '12',push:'0'}">
-          <img src="@/assets/byTakeTheMicrophone.png" style="height: auto;width: 100%;">
+          <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/byTakeTheMicrophone.png" style="height: auto;width: 100%;">
           <div style="height: 50px"></div>
           <div style="font-size: 30px;;font-weight: 400;color: #000000;">
             EntySquare + CSLA 公链
@@ -345,7 +345,7 @@
         </el-col>
         <el-col :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}" :md="{span: '3',offset:'0'}"
                 :lg="{span: '2',offset:'0'}" :xl="{span: '2',pull:'0'}" class="hidden-sm-and-down">
-          <img src="@/assets/cslaLogo.png" style="height: auto;width: 100%;">
+          <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/cslaLogo.png" style="height: auto;width: 100%;">
         </el-col>
       </el-row>
     </div>
@@ -403,13 +403,13 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      floatingBalloonPng: {
-        backgroundImage: 'url(' + require('@/assets/floatingBalloon.png') + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%'
-      },
+      // floatingBalloonPng: {
+      //   backgroundImage: 'url(' + require('https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/floatingBalloon.png') + ')',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundSize: '100% 100%'
+      // },
       purpleCurvePng: {
-        backgroundImage: 'url(' + require('@/assets/purpleCurve.png') + ')',
+        backgroundImage: 'url(https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/purpleCurve.png)',
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%'
       }
