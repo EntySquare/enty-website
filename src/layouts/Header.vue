@@ -5,7 +5,7 @@
       <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
               :xl="{span: 2, push: 1}">
         <router-link to="/">
-          <el-image :src="require('../assets/entyLogo.png')" style="height: 48px; width: 235px;"></el-image>
+          <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/entyLogo.png" style="height: 48px; width: 235px;"></el-image>
         </router-link>
       </el-col>
       <el-col class="is-justify-center" :span="8" :push="6">
@@ -52,7 +52,7 @@
           <div style="text-align: right; margin: 0">
             <el-button style="color: #94469B" size="mini" @click="visible1 = false">确定</el-button>
           </div>
-          <el-image :src="require('../assets/rightArrow.png')"
+          <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/rightArrow.png"
                     slot="reference"
                     style="height: 60px; width: 60px; margin-top: 3px"></el-image>
         </el-popover>
@@ -61,7 +61,7 @@
     <el-col :xs="12" :sm="12" :md="0" :lg="0" :xl="0">
     <div class="" style="height: 66px;width: 100%;background: #FFFFFF;position: fixed; z-index: 99">
       <router-link to="/" style="float: left">
-        <el-image :src="require('../assets/entyLogo.png')"
+        <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/entyLogo.png"
                   style="height: auto; width: 150px;margin-top: 17px;margin-left: 20px"></el-image>
       </router-link>
       <el-button @click="drawer = true" type="primary"

@@ -7,7 +7,7 @@
           <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
                   :xl="{span: 2, push: 1}">
             <router-link to="/">
-            <el-image :src="require('../assets/entyLogo.png')" style="height: 48px; width: 235px;"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/entyLogo.png" style="height: 48px; width: 235px;"></el-image>
             </router-link>
           </el-col>
           <el-col class="is-justify-center" :span="8" :push="6">
@@ -25,7 +25,7 @@
                 </el-col>
                 <el-col>
                   <router-link to="/token">
-                  <div class="headFont">代币</div>
+                    <div class="headFont">代币</div>
                   </router-link>
                 </el-col>
                 <el-col>
@@ -53,7 +53,7 @@
               <div style="text-align: right; margin: 0">
                 <el-button style="color: #94469B" size="mini" @click="visible1 = false">确定</el-button>
               </div>
-              <el-image :src="require('../assets/rightArrow.png')"
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/rightArrow.png"
                         slot="reference"
                         style="height: 60px; width: 60px; margin-top: 3px"></el-image>
             </el-popover>
@@ -62,16 +62,21 @@
         </el-row>
       </div>
       <div v-show="sideNaviShow" class="sideNavi hidden-sm-and-down">
-        <el-link class="a-tag-color" @click="jump(0)" :underline="false">首页</el-link><br/>
-        <el-link class="a-tag-color" @click="jump(1)" :underline="false">技术</el-link><br/>
-        <el-link class="a-tag-color" @click="jump(2)" :underline="false">团队</el-link><br/>
-        <el-link class="a-tag-color" @click="jump(3)" :underline="false">博客</el-link><br/>
-        <el-link class="a-tag-color" @click="jump(4)" :underline="false">关于</el-link><br/>
+        <el-link class="a-tag-color" @click="jump(0)" :underline="false">首页</el-link>
+        <br/>
+        <el-link class="a-tag-color" @click="jump(1)" :underline="false">技术</el-link>
+        <br/>
+        <el-link class="a-tag-color" @click="jump(2)" :underline="false">团队</el-link>
+        <br/>
+        <el-link class="a-tag-color" @click="jump(3)" :underline="false">博客</el-link>
+        <br/>
+        <el-link class="a-tag-color" @click="jump(4)" :underline="false">关于</el-link>
+        <br/>
       </div>
       <el-col :xs="12" :sm="12" :md="0" :lg="0" :xl="0" v-show="menuShow">
         <div class="" style="height: 66px;width: 100%;background: #FFFFFF;position: fixed; z-index: 99">
           <router-link to="/" style="float: left">
-            <el-image :src="require('../assets/entyLogo.png')"
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/entyLogo.png"
                       style="height: auto; width: 150px;margin-top: 17px;margin-left: 20px"></el-image>
           </router-link>
           <el-button @click="drawer = true" type="primary"
@@ -84,19 +89,19 @@
         <el-col :xs="{span: 22, push: 2}" :sm="{span: 22, push: 2}" :md="{span: 3, push: 1}" :lg="{span: 3, push: 1}"
                 :xl="{span: 3, push: 2}">
           <div style="height: 96px; width: 235px; padding-top: 48px" @click="scrollAnimation()">
-            <el-image :src="require('../assets/entyLogo.png')"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/entyLogo.png"></el-image>
           </div>
           <div class="headTitle1">EntySquare</div>
           <div class="headTitle2">安全、简洁、速度。</div>
           <div class="headTitle3">凭借核心技术和专业沉淀，我们高效连接全球市场， 为所有商业创造价值。</div>
           <div style="height: 96px; width: 96px; padding-top: 60px" @click="scrollAnimation()">
-            <el-image :src="require('../assets/downArrow.png')"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/downArrow.png"></el-image>
           </div>
         </el-col>
         <el-col :xs="{span: 22, push: 0}" :sm="{span: 15, push: 2}" :md="{span: 14, push: 7}" :lg="{span: 14, push: 7}"
                 :xl="{span: 17, push: 5}">
           <div style="text-align: right">
-            <el-image :src="require('../assets/background.png')" class="headBackground"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/background.png" class="headBackground"></el-image>
           </div>
         </el-col>
       </el-row>
@@ -114,7 +119,7 @@
       <el-row>
         <div>
           <div class="green-background">
-            <el-image :src="require('../assets/background_green.png')"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/background_green.png"></el-image>
           </div>
           <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
                   :xl="{span: 2, push: 4}">
@@ -129,7 +134,7 @@
                 :lg="{span: 10, push: 14}"
                 :xl="{span: 12, push: 11}">
           <div class="enty-background">
-            <el-image :src="require('../assets/background_enty.png')"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/background_enty.png"></el-image>
           </div>
         </el-col>
       </el-row>
@@ -150,7 +155,7 @@
         <el-col :xs="{span: 20, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 6, push: 12}"
                 :xl="{span: 6, push: 11}">
           <div style="text-align: left">
-            <el-image :src="require('../assets/advanIcon1.png')" style="width: 120px; height: 120px;"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/advanIcon1.png" style="width: 120px; height: 120px;"></el-image>
           </div>
           <div class="advance-title">扩展性</div>
           <div class="advance-text">基于BA*-VRF共识的POS高性能公链，匿名选举、交易Proof验证压缩并支持NFT合约扩展，让去中心化应用更加顺畅</div>
@@ -161,7 +166,7 @@
         <el-col :xs="{span: 20, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 6, push: 12}"
                 :xl="{span: 6, push: 11}">
           <div style="text-align: left">
-            <el-image :src="require('../assets/advanIcon2.png')" style="width: 120px; height: 120px;"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/advanIcon2.png" style="width: 120px; height: 120px;"></el-image>
           </div>
           <div class="advance-title">多样性</div>
           <div class="advance-text">构建全新金融应用、存储扩展、NFT去中心化执行、数字资产及用户语言聊天等多种应用场景</div>
@@ -172,13 +177,104 @@
         <el-col :xs="{span: 20, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 6, push: 12}"
                 :xl="{span: 6, push: 11}">
           <div style="text-align: left">
-            <el-image :src="require('../assets/advanIcon3.png')" style="width: 120px; height: 120px;"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/advanIcon3.png" style="width: 120px; height: 120px;"></el-image>
           </div>
           <div class="advance-title">安全性</div>
           <div class="advance-text">基于BA*-VRF的POS共识机制，在协议层增加了安全及攻击保护</div>
         </el-col>
       </el-row>
-      <div class="team-person-totalBack">
+      <!--      <div class="team-person-totalBack">-->
+      <!--        <el-row class="section">-->
+      <!--          <el-col :xs="{span: 20, push: 1}" :sm="{span: 2, push: 2}" :md="{span: 8, push: 2}" :lg="{span: 8, push: 2}"-->
+      <!--                  :xl="{span: 6, push: 4}">-->
+      <!--            <div class="body-title5">核心团队</div>-->
+      <!--            <div class="team-text" style="padding-bottom: 80px">来自分布式计算、金融交易、区块链共识设计和跨链等各领域经验丰富的资深人士</div>-->
+      <!--          </el-col>-->
+      <!--        </el-row>-->
+      <!--        <el-row>-->
+      <!--          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"-->
+      <!--                  :xl="{span: 4, push: 4}">-->
+      <!--            <div class="team-person-background">-->
+      <!--              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/zengboyuan.png" class="team-person-image"></el-image>-->
+      <!--              <div class="team-person-name">曾博远</div>-->
+      <!--              <div class="team-person-position">创始人 & 首席技术官</div>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 4}" :md="{span: 5, push: 4}" :lg="{span: 5, push: 4}"-->
+      <!--                  :xl="{span: 4, push: 4}">-->
+      <!--            <div class="team-person-background">-->
+      <!--              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/luoyue.png" class="team-person-image"></el-image>-->
+      <!--              <div class="team-person-name">佳宝</div>-->
+      <!--              <div class="team-person-position">加密算法专家</div>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 4}" :md="{span: 5, push: 4}" :lg="{span: 5, push: 4}"-->
+      <!--                  :xl="{span: 4, push: 4}">-->
+      <!--            <div class="team-person-background">-->
+      <!--              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/luoyue.png" class="team-person-image"></el-image>-->
+      <!--              <div class="team-person-name">罗越</div>-->
+      <!--              <div class="team-person-position">加密算法专家</div>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 6}" :md="{span: 2, push: 6}" :lg="{span: 5, push: 6}"-->
+      <!--                  :xl="{span: 4, push: 4}">-->
+      <!--            <div class="team-person-background">-->
+      <!--              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/zhuanghanchen.png" class="team-person-image"></el-image>-->
+      <!--              <div class="team-person-name">庄寒尘</div>-->
+      <!--              <div class="team-person-position">Dapp专家</div>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"-->
+      <!--                  :xl="{span: 4, push: 4}">-->
+      <!--            <div class="team-person-background">-->
+      <!--              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/yangyuhang.png" class="team-person-image"></el-image>-->
+      <!--              <div class="team-person-name">杨宇航</div>-->
+      <!--              <div class="team-person-position">首席架构师</div>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 4}" :md="{span: 5, push: 4}" :lg="{span: 5, push: 4}"-->
+      <!--                  :xl="{span: 6, push: 4}">-->
+      <!--            <div class="team-person-background">-->
+      <!--              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/pengjinchang.png" class="team-person-image"></el-image>-->
+      <!--              <div class="team-person-name">彭晋昌</div>-->
+      <!--              <div class="team-person-position">首席产品官</div>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 6}" :md="{span: 5, push: 6}" :lg="{span: 5, push: 6}"-->
+      <!--                  :xl="{span: 6, push: 4}">-->
+      <!--            <div class="team-person-background">-->
+      <!--              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/guodayang.png" class="team-person-image"></el-image>-->
+      <!--              <div class="team-person-name">郭大洋</div>-->
+      <!--              <div class="team-person-position">技术顾问 / 后端架构师</div>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"-->
+      <!--                  :xl="{span: 6, push: 4}">-->
+      <!--            <div class="team-person-background">-->
+      <!--              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/wangxiaopeng.png" class="team-person-image"></el-image>-->
+      <!--              <div class="team-person-name">汪晓鹏</div>-->
+      <!--              <div class="team-person-position">金融解决方案架构师</div>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 4}" :md="{span: 5, push: 4}" :lg="{span: 5, push: 4}"-->
+      <!--                  :xl="{span: 6, push: 4}">-->
+      <!--            <div class="team-person-background">-->
+      <!--              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/yuchongliang.png" class="team-person-image"></el-image>-->
+      <!--              <div class="team-person-name">余崇亮</div>-->
+      <!--              <div class="team-person-position">高级合伙人</div>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 6}" :md="{span: 5, push: 6}" :lg="{span: 5, push: 6}"-->
+      <!--                  :xl="{span: 6, push: 4}">-->
+      <!--            <div class="team-person-background">-->
+      <!--              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/wangyi1.png" class="team-person-image"></el-image>-->
+      <!--              <div class="team-person-name">王易</div>-->
+      <!--              <div class="team-person-position">全球研究中心主任</div>-->
+      <!--            </div>-->
+      <!--          </el-col>-->
+      <!--        </el-row>-->
+      <!--      </div>-->
+      <div style="background: black">
         <el-row class="section">
           <el-col :xs="{span: 20, push: 1}" :sm="{span: 2, push: 2}" :md="{span: 8, push: 2}" :lg="{span: 8, push: 2}"
                   :xl="{span: 6, push: 4}">
@@ -186,84 +282,92 @@
             <div class="team-text" style="padding-bottom: 80px">来自分布式计算、金融交易、区块链共识设计和跨链等各领域经验丰富的资深人士</div>
           </el-col>
         </el-row>
+
         <el-row>
-          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"
-                  :xl="{span: 6, push: 4}">
-            <div class="team-person-background">
-              <el-image :src="require('../assets/zengboyuan.png')" class="team-person-image"></el-image>
-              <div class="team-person-name">曾博远</div>
-              <div class="team-person-position">创始人 & 首席技术官</div>
-            </div>
-          </el-col>
-          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 4}" :md="{span: 5, push: 4}" :lg="{span: 5, push: 4}"
-                  :xl="{span: 6, push: 4}">
-            <div class="team-person-background">
-              <el-image :src="require('../assets/luoyue.png')" class="team-person-image"></el-image>
-              <div class="team-person-name">罗越</div>
-              <div class="team-person-position">加密算法专家</div>
-            </div>
-          </el-col>
-          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 6}" :md="{span: 2, push: 6}" :lg="{span: 5, push: 6}"
-                  :xl="{span: 6, push: 4}">
-            <div class="team-person-background">
-              <el-image :src="require('../assets/zhuanghanchen.png')" class="team-person-image"></el-image>
-              <div class="team-person-name">庄寒尘</div>
-              <div class="team-person-position">Dapp专家</div>
-            </div>
+          <el-col :xs="{span: 24, push: 1}" :sm="{span: 20, push: 2}" :md="{span: 20, push: 2}" :lg="{span: 20, push: 2}" :xl="{span: 16, push: 4}" style="margin-left: -48px;">
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_zby.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+              <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Terrill Tsang</div>
+              <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">曾博远</div>
+              </div>
+            </el-col>
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_jb.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Jiabao</div>
+                <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">佳宝</div>
+              </div>
+            </el-col>
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_ly.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Luo Yue</div>
+                <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">罗越</div>
+              </div>
+            </el-col>
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_zhc.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Zhuang Hanchen</div>
+                <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">庄寒尘</div>
+              </div>
+            </el-col>
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_yyh.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Yang Yuhang</div>
+                <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">杨宇航</div>
+              </div>
+            </el-col>
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_pjc.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Peng Jinchang</div>
+                <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">彭晋昌</div>
+              </div>
+            </el-col>
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_gdy.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Guo Dayang</div>
+                <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">郭大洋</div>
+              </div>
+            </el-col>
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_wxp.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Wang Xiaopeng</div>
+                <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">汪晓鹏</div>
+              </div>
+            </el-col>
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_ycl.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Yu Chongliang</div>
+                <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">余崇亮</div>
+              </div>
+            </el-col>
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_wy.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Wang Yi</div>
+                <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">王易</div>
+              </div>
+            </el-col>
           </el-col>
         </el-row>
-        <el-row class="team-person-interval">
-          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"
-                  :xl="{span: 6, push: 4}">
-            <div class="team-person-background">
-              <el-image :src="require('../assets/yangyuhang.png')" class="team-person-image"></el-image>
-              <div class="team-person-name">杨宇航</div>
-              <div class="team-person-position">首席架构师</div>
-            </div>
-          </el-col>
-          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 4}" :md="{span: 5, push: 4}" :lg="{span: 5, push: 4}"
-                  :xl="{span: 6, push: 4}">
-            <div class="team-person-background">
-              <el-image :src="require('../assets/pengjinchang.png')" class="team-person-image"></el-image>
-              <div class="team-person-name">彭晋昌</div>
-              <div class="team-person-position">首席产品官</div>
-            </div>
-          </el-col>
-          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 6}" :md="{span: 5, push: 6}" :lg="{span: 5, push: 6}"
-                  :xl="{span: 6, push: 4}">
-            <div class="team-person-background">
-              <el-image :src="require('../assets/guodayang.png')" class="team-person-image"></el-image>
-              <div class="team-person-name">郭大洋</div>
-              <div class="team-person-position">技术顾问 / 后端架构师</div>
-            </div>
-          </el-col>
-        </el-row>
-        <el-row class="team-person-interval">
-          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 2}" :md="{span: 5, push: 2}" :lg="{span: 5, push: 2}"
-                  :xl="{span: 6, push: 4}">
-            <div class="team-person-background">
-              <el-image :src="require('../assets/wangxiaopeng.png')" class="team-person-image"></el-image>
-              <div class="team-person-name">汪晓鹏</div>
-              <div class="team-person-position">金融解决方案架构师</div>
-            </div>
-          </el-col>
-          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 4}" :md="{span: 5, push: 4}" :lg="{span: 5, push: 4}"
-                  :xl="{span: 6, push: 4}">
-            <div class="team-person-background">
-              <el-image :src="require('../assets/yuchongliang.png')" class="team-person-image"></el-image>
-              <div class="team-person-name">余崇亮</div>
-              <div class="team-person-position">高级合伙人</div>
-            </div>
-          </el-col>
-          <el-col :xs="{span: 8, push: 1}" :sm="{span: 5, push: 6}" :md="{span: 5, push: 6}" :lg="{span: 5, push: 6}"
-                  :xl="{span: 6, push: 4}">
-            <div class="team-person-background">
-              <el-image :src="require('../assets/wangyi1.png')" class="team-person-image"></el-image>
-              <div class="team-person-name">王易</div>
-              <div class="team-person-position">全球研究中心主任</div>
-            </div>
-          </el-col>
-        </el-row>
+        <div style="height: 250px"></div>
       </div>
       <div>
         <el-row class="section">
@@ -276,7 +380,7 @@
           <el-col :xs="{span: 20, push: 2}" :sm="{span: 17, push: 7}" :md="{span: 16, push: 8}" :lg="{span: 6, push: 2}"
                   :xl="{span: 6, push: 4}">
             <div class="consult-size">
-              <el-image :src="require('../assets/consult1.png')" class="consult-image"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/consult1.png" class="consult-image"></el-image>
               <div class="consult-date">2021年3月18日</div>
               <div class="consult-text">EntySquare 创始人Terrill Tsang出任韩国 hillstone CTO …</div>
               <div class="consult-line"></div>
@@ -285,7 +389,7 @@
           <el-col :xs="{span: 20, push: 2}" :sm="{span: 17, push: 7}" :md="{span: 16, push: 8}" :lg="{span: 6, push: 3}"
                   :xl="{span: 6, push: 4}">
             <div class="consult-size">
-              <el-image :src="require('../assets/consult2.png')" class="consult-image"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/consult2.png" class="consult-image"></el-image>
               <div class="consult-date">2021年5月5日</div>
               <div class="consult-text">EntySquare 创始人Terrill Tsang 担任 CSLA公链技术大使…</div>
               <div class="consult-line"></div>
@@ -294,7 +398,7 @@
           <el-col :xs="{span: 20, push: 2}" :sm="{span: 17, push: 7}" :md="{span: 16, push: 8}" :lg="{span: 6, push: 4}"
                   :xl="{span: 6, push: 4}">
             <div class="consult-size">
-              <el-image :src="require('../assets/consult1.png')" class="consult-image"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/consult1.png" class="consult-image"></el-image>
               <div class="consult-date">2021年3月1日</div>
               <div class="consult-text">EntySquare 为韩国Investors交易所提供技术服务…</div>
               <div class="consult-line"></div>
@@ -305,7 +409,7 @@
           <el-col :xs="{span: 20, push: 2}" :sm="{span: 17, push: 7}" :md="{span: 16, push: 8}" :lg="{span: 6, push: 2}"
                   :xl="{span: 6, push: 4}">
             <div class="consult-size">
-              <el-image :src="require('../assets/consult4.png')" class="consult-image"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/consult4.png" class="consult-image"></el-image>
               <div class="consult-date">2021年4月19日</div>
               <div class="consult-text">EntySquare 团队为汉唐云提供算法技术和开发服务…</div>
               <div class="consult-line"></div>
@@ -314,7 +418,7 @@
           <el-col :xs="{span: 20, push: 2}" :sm="{span: 17, push: 7}" :md="{span: 16, push: 8}" :lg="{span: 6, push: 3}"
                   :xl="{span: 6, push: 4}">
             <div class="consult-size">
-              <el-image :src="require('../assets/consult5.png')" class="consult-image"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/consult5.png" class="consult-image"></el-image>
               <div class="consult-date">2021年4月19日</div>
               <div class="consult-text">EntySquare 团队为E-mu.ai提供技术服务…</div>
               <div class="consult-line"></div>
@@ -323,7 +427,7 @@
           <el-col :xs="{span: 20, push: 2}" :sm="{span: 17, push: 7}" :md="{span: 16, push: 8}" :lg="{span: 6, push: 4}"
                   :xl="{span: 6, push: 4}">
             <div class="consult-size">
-              <el-image :src="require('../assets/consult6.png')" class="consult-image"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/consult6.png" class="consult-image"></el-image>
               <div class="consult-date">2021年5月16日</div>
               <div class="consult-text">EntySquare 团队为KB Token提供技术服务…</div>
               <div class="consult-line"></div>
@@ -349,19 +453,19 @@
         <el-row>
           <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 1}" :lg="{span: 5, push: 2}"
                   :xl="{span: 4, push: 4}">
-            <el-image :src="require('../assets/cooperation1.png')" class="cooperation-icon"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/cooperation1.png" class="cooperation-icon"></el-image>
           </el-col>
           <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 1}" :lg="{span: 5, push: 2}"
                   :xl="{span: 4, push: 4}">
-            <el-image :src="require('../assets/cooperation2.png')" class="cooperation-icon"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/cooperation2.png" class="cooperation-icon"></el-image>
           </el-col>
           <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 1}" :lg="{span: 5, push: 2}"
                   :xl="{span: 4, push: 4}">
-            <el-image :src="require('../assets/cooperation3.png')" class="cooperation-icon"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/cooperation3.png" class="cooperation-icon"></el-image>
           </el-col>
           <el-col :xs="{span: 10, push: 2}" :sm="{span: 10, push: 2}" :md="{span: 5, push: 1}" :lg="{span: 5, push: 2}"
                   :xl="{span: 4, push: 4}">
-            <el-image :src="require('../assets/cooperation4.png')" class="cooperation-icon"></el-image>
+            <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/cooperation4.png" class="cooperation-icon"></el-image>
           </el-col>
         </el-row>
       </div>
@@ -378,11 +482,11 @@
                 width="220"
                 v-model="visible">
                 <p>企业邮箱: terilscaub@gmail.com</p>
-<!--                <p>联系电话: 15361445990</p>-->
+                <!--                <p>联系电话: 15361445990</p>-->
                 <div style="text-align: right; margin: 0">
                   <el-button style="color: #94469B" size="mini" @click="visible = false">确定</el-button>
                 </div>
-                <el-image :src="require('../assets/grayArrow.png')"
+                <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/grayArrow.png"
                           slot="reference"
                           class="home-rotter-arrow"></el-image>
               </el-popover>
@@ -391,7 +495,7 @@
           <el-col :xs="{span: 20, push: 4}" :sm="{span: 7, push: 5}" :md="{span: 7, push: 5}" :lg="{span: 6, push: 10}"
                   :xl="{span: 6, push: 8}">
             <div class="home-footer-image">
-              <el-image :src="require('../assets/homeFooter.png')"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/homeFooter.png"></el-image>
             </div>
           </el-col>
         </el-row>
@@ -416,19 +520,19 @@
         </router-link>
       </el-row>
       <el-row>
-        <router-link  @click.native="drawer = false" to="/publicChain">
+        <router-link @click.native="drawer = false" to="/publicChain">
           <el-col :span="12" class="drawer-left-text" style="padding: 10px 10px 10px 20px" align="left">公链</el-col>
           <el-col :span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
         </router-link>
       </el-row>
       <el-row>
-        <router-link  @click.native="drawer = false"  to="/token">
+        <router-link @click.native="drawer = false" to="/token">
           <el-col :span="12" class="drawer-left-text" style="padding: 10px 10px 10px 20px" align="left">代币</el-col>
           <el-col :span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
         </router-link>
       </el-row>
       <el-row>
-        <router-link  @click.native="drawer = false"  to="/coinMining">
+        <router-link @click.native="drawer = false" to="/coinMining">
           <el-col :span="12" class="drawer-left-text" style="padding: 10px 10px 10px 20px" align="left">挖矿</el-col>
           <el-col :span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
         </router-link>
@@ -439,6 +543,7 @@
 
 <script>
 import Footer from '../layouts/Footer'
+
 document.body.scrollTop = document.documentElement.scrollTop = 0
 
 export default {
@@ -510,6 +615,7 @@ export default {
     }
   }
 }
+
 function scrollAnimationTo (currentY, targetY, splitTimes) {
   console.log(currentY + '=>' + targetY + ',' + splitTimes)
   // 获取当前位置方法
@@ -1154,11 +1260,11 @@ a {
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  .sideNavi{
-    position:fixed;
+  .sideNavi {
+    position: fixed;
     z-index: 5;
-    left:25px;
-    top:260px;
+    left: 25px;
+    top: 260px;
   }
   .headBackground {
     height: 500px;
@@ -1457,11 +1563,11 @@ a {
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
-  .sideNavi{
-    position:fixed;
+  .sideNavi {
+    position: fixed;
     z-index: 5;
-    left:30px;
-    top:360px;
+    left: 30px;
+    top: 360px;
   }
   .headBackground {
     height: 600px;
@@ -1761,11 +1867,11 @@ a {
 
 /*适配web端*/
 @media screen and (min-width: 1920px) {
-  .sideNavi{
-    position:fixed;
+  .sideNavi {
+    position: fixed;
     z-index: 5;
-    left:70px;
-    top:360px;
+    left: 70px;
+    top: 360px;
   }
   .headBackground {
     height: auto;
@@ -2057,17 +2163,27 @@ a {
     margin-top: -157px
   }
 }
+
 .drawer-left-text {
   font-size: 24px;
   font-weight: 500;
   color: #000000;
 }
-.a-tag-color{
+
+.a-tag-color {
   font-size: 16px;
   font-weight: 500;
   color: #626262;
   line-height: 32px;
 }
-.a-tag-color:link {color: grey}
-.a-tag-color:hover {color:#94469B;}  /* 鼠标移动到链接上 */
+
+.a-tag-color:link {
+  color: grey
+}
+
+.a-tag-color:hover {
+  color: #94469B;
+}
+
+/* 鼠标移动到链接上 */
 </style>
