@@ -286,7 +286,7 @@
         <el-row>
           <el-col :xs="{span: 24, push: 1}" :sm="{span: 20, push: 2}" :md="{span: 20, push: 2}" :lg="{span: 20, push: 2}" :xl="{span: 16, push: 4}" style="margin-left: -48px;">
             <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_zby.png" style="height: auto;width: 100%"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E6%9B%BE%E5%8D%9A%E8%BF%9C.png" style="height: auto;width: 100%"></el-image>
               <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
                 <div style="height: 13px"></div>
               <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Terrill Tsang</div>
@@ -294,7 +294,7 @@
               </div>
             </el-col>
             <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_jb.png" style="height: auto;width: 100%"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E4%BD%B3%E5%AE%9D.png" style="height: auto;width: 100%"></el-image>
               <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
                 <div style="height: 13px"></div>
                 <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Jiabao</div>
@@ -302,7 +302,15 @@
               </div>
             </el-col>
             <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_ly.png" style="height: auto;width: 100%"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E7%8E%8B%E4%BD%B3%E8%8D%A3.png" style="height: auto;width: 100%"></el-image>
+              <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
+                <div style="height: 13px"></div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Wang Jiarong</div>
+                <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">王佳荣</div>
+              </div>
+            </el-col>
+            <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E7%BD%97%E8%B6%8A.png" style="height: auto;width: 100%"></el-image>
               <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
                 <div style="height: 13px"></div>
                 <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Luo Yue</div>
@@ -310,7 +318,7 @@
               </div>
             </el-col>
             <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_zhc.png" style="height: auto;width: 100%"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E5%BA%84%E5%AF%92%E5%B0%98.png" style="height: auto;width: 100%"></el-image>
               <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
                 <div style="height: 13px"></div>
                 <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Zhuang Hanchen</div>
@@ -318,15 +326,15 @@
               </div>
             </el-col>
             <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_yyh.png" style="height: auto;width: 100%"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E6%9D%A8%E5%AE%87%E8%88%AA.png" style="height: auto;width: 100%"></el-image>
               <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
                 <div style="height: 13px"></div>
-                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Yang Yuhang</div>
+                <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Yuvan Yeung</div>
                 <div style="color: #FFFFFF;margin-left: 7%;margin-top: 6px;font-size: 20px;" align="left">杨宇航</div>
               </div>
             </el-col>
             <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_pjc.png" style="height: auto;width: 100%"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E5%BD%AD%E6%99%8B%E6%98%8C.png" style="height: auto;width: 100%"></el-image>
               <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
                 <div style="height: 13px"></div>
                 <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Peng Jinchang</div>
@@ -334,7 +342,7 @@
               </div>
             </el-col>
             <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_gdy.png" style="height: auto;width: 100%"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E9%83%AD%E5%A4%A7%E6%B4%8B.png" style="height: auto;width: 100%"></el-image>
               <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
                 <div style="height: 13px"></div>
                 <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Guo Dayang</div>
@@ -342,7 +350,7 @@
               </div>
             </el-col>
             <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_wxp.png" style="height: auto;width: 100%"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E6%B1%AA%E6%99%93%E9%B9%8F.png" style="height: auto;width: 100%"></el-image>
               <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
                 <div style="height: 13px"></div>
                 <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Wang Xiaopeng</div>
@@ -350,7 +358,7 @@
               </div>
             </el-col>
             <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_ycl.png" style="height: auto;width: 100%"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E4%BD%99%E5%B4%87%E4%BA%AE.png" style="height: auto;width: 100%"></el-image>
               <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
                 <div style="height: 13px"></div>
                 <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Yu Chongliang</div>
@@ -358,7 +366,7 @@
               </div>
             </el-col>
             <el-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 6,}" style="padding: 48px 0px 0px 48px">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/team_wy.png" style="height: auto;width: 100%"></el-image>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/people/%E7%8E%8B%E6%98%93.png" style="height: auto;width: 100%"></el-image>
               <div style="height: 80px;width: 100%;background: #222222;margin-top: -4px;">
                 <div style="height: 13px"></div>
                 <div style="color: #FFFFFF;margin-left: 7%;font-size: 16px;" align="left">Wang Yi</div>
