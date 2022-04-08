@@ -388,9 +388,9 @@
           <el-col :xs="{span: 20, push: 2}" :sm="{span: 17, push: 7}" :md="{span: 16, push: 8}" :lg="{span: 6, push: 2}"
                   :xl="{span: 6, push: 4}">
             <div class="consult-size">
-              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/consult1.png" class="consult-image"></el-image>
-              <div class="consult-date">2021年3月18日</div>
-              <div class="consult-text">EntySquare 创始人Terrill Tsang出任韩国 hillstone CTO …</div>
+              <el-image src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/consult_ar.png" class="consult-image"></el-image>
+              <div class="consult-date">2022年4月02日</div>
+              <div class="consult-text">Entysquare 成为全球唯一领先的Arweave算法提供商 …</div>
               <div class="consult-line"></div>
             </div>
           </el-col>

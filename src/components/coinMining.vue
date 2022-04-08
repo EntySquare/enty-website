@@ -137,7 +137,7 @@
       <el-row :gutter="10" :style="usageBackgroundImg">
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:1}" :xl="{span:6,push:4}">
           <div style="margin-top:148px;">
-            <img class="coinCardSet" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/coinCardSet.png">
+            <img class="coinCardSet" src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/coinCardSet2.png">
           </div>
         </el-col>
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:8,push:6}" :xl="{span:8,push:8}">
