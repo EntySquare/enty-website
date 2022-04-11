@@ -31,6 +31,11 @@
                 <div class="headFont">挖矿</div>
               </router-link>
             </el-col>
+            <el-col>
+              <router-link to="/arCoin">
+                <div class="headFont">Arweave算法提供商</div>
+              </router-link>
+            </el-col>
           </el-row>
         </div>
       </el-col>
@@ -100,6 +105,13 @@
       <el-row>
         <router-link  @click.native="drawer = false"  to="/coinMining">
           <el-col :span="12" class="drawer-left-text" style=";padding: 10px 10px 10px 20px" align="left">挖矿</el-col>
+          <el-col :span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
+        </router-link>
+      </el-row>
+
+      <el-row>
+        <router-link  @click.native="drawer = false"  to="/arCoin">
+          <el-col :span="12" class="drawer-left-text" style=";padding: 10px 10px 10px 20px" align="left">算法</el-col>
           <el-col :span="12" class="drawer-left-text" style="padding: 10px 20px 10px 0px" align="right">+</el-col>
         </router-link>
       </el-row>

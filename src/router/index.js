@@ -38,6 +38,11 @@ export default new Router({
           path: '/coinMining',
           name: 'coinMining',
           component: () => import('../components/coinMining.vue')
+        },
+        {
+          path: '/arCoin',
+          name: 'arCoin',
+          component: () => import('../components/arCoin.vue')
         }
       ]
     }

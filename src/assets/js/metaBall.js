@@ -5000,7 +5000,6 @@ Simulation.prototype.update = function (gl, dt) {
   gl.enable(gl.CULL_FACE)
   gl.frontFace(gl.CW)
   gl.enable(gl.DEPTH_TEST)
-
   // gl.clearColor(0.2, 0.2, 0.2, 1.0)
   // 背景色
   gl.clearColor(1, 1, 1, 0)
@@ -5125,7 +5124,7 @@ Simulation.prototype.update = function (gl, dt) {
 let c = document.getElementsByTagName('canvas')[0]
 c.width = window.innerWidth
 c.height = window.innerHeight
-let gl = c.getContext('webgl', {failIfMajorPerformanceCaveat: true, antialias: true})
+let gl = c.getContext('webgl', {antialias: false, depth: false})
 if (!gl) {
   alert('no webgl')
   throw Error('no webgl')
@@ -5140,8 +5139,9 @@ function update (timestamp) {
   }
   requestAnimationFrame(update)
   let dt = timestamp - lastUpdate
+  console.log(gl)
   lastUpdate = timestamp
-  simulation.update(gl, dt / 6000)
+  simulation.update(gl, dt / 60000)
 }
 
 window.requestAnimationFrame(update)
