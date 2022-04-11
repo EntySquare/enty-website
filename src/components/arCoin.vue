@@ -1,8 +1,7 @@
 <template>
   <div style="overflow-x: hidden;">
-
     <div class="container" style="background-color: black">
-
+      <div id="netWave" style="position: relative;  left: 0; width: 100%; height:0px;top: -300px"></div>
       <el-row :gutter="10" align="middle" justify="center">
         <!--        <canvas style="height: 100%;width: 100%;position:absolute;left:0px;top:0px;z-index:-1;"></canvas>-->
         <!--        <animationBall></animationBall>-->
@@ -246,7 +245,7 @@
 <script>
 import animationBall from './animationBall'
 import wave from '../assets/js/wave.js'
-
+import netWave from '../assets/js/net_wave.js'
 document.body.scrollTop = document.documentElement.scrollTop = 0
 export default {
   name: 'coinMining',
@@ -259,6 +258,9 @@ export default {
 
     wave.initWave('wave')
     wave.animate()
+
+    netWave.init('netWave')
+    netWave.animate()
   },
   data () {
     return {}

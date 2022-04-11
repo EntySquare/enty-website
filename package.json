@@ -17,6 +17,7 @@
     "element-ui": "^2.15.2",
     "gsap": "^3.10.2",
     "three": "^0.139.2",
+    "three55": "npm:three@^0.55.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
