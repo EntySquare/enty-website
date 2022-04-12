@@ -1,7 +1,7 @@
 
 // set inner height and width based on screen size
 import * as THREE from 'three' // npm install three 后，将three引用进js（注意版本，three.js版本跨度大，很多方法可能不兼容，需要留意，后续会提到）
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 const winWidth = window.innerWidth
 const winHeight = window.innerHeight
@@ -141,15 +141,16 @@ const fshader = `
     `
 
 // global vars
+// eslint-disable-next-line no-unused-vars
 let scene, camera, renderer, controls, circle, clock, uniforms, container
 
 function init (id) {
   // 初始化相机，用于观察场景，可设置视角的远近，长宽比，方向等
-  camera = new THREE.PerspectiveCamera(75, winWidth / winHeight, 0.01, 1000)
+  camera = new THREE.PerspectiveCamera(70, winWidth / winHeight, 0.01, 1000)
   camera.position.set(0, 0, 0.5)
   // 初始化场景，后续会在此场景中添加元素
   scene = new THREE.Scene()
-  // scene.background = new THREE.Color('#F28080');
+  // scene.background = new THREE.Color('#000000')
   // render
   renderer = new THREE.WebGLRenderer()
   renderer.setSize(winWidth, winHeight)
@@ -157,8 +158,8 @@ function init (id) {
   clock = new THREE.Clock()
 
   uniforms = {
-    u_time: {value: 0.0},
-    u_color: { value: new THREE.Color('#94469B') }
+    u_time: {value: 0.0}
+    // u_color: { value: new THREE.Color('#14469B') }
   }
   // geometry
   const geometry = new THREE.PlaneGeometry(0.6, 0.6, 20, 20)
@@ -181,10 +182,10 @@ function init (id) {
   // set clock
   clock = new THREE.Clock()
   // orbit controls
-  controls = new OrbitControls(camera, renderer.domElement)
-  controls.addEventListener('change', () => {
-    renderer.render(scene, camera)
-  })
+  // controls = new OrbitControls(camera, renderer.domElement)
+  // controls.addEventListener('change', () => {
+  //   renderer.render(scene, camera)
+  // })
   // 获取并将渲染器绑定到容器
   container = document.getElementById(id)
   container.appendChild(renderer.domElement)
@@ -201,11 +202,17 @@ function resize () {
 function animate () {
   requestAnimationFrame(animate)
   render()
-  uniforms.u_time.value = clock.getElapsedTime()
 }
 // 动态的逻辑
 function render () {
+  // setTimeout(() => {
+  //   uniforms.u_time.value = clock.getElapsedTime()
+  //   renderer.render(scene, camera)
+  // }, 5000)
+  uniforms.u_time.value = clock.getElapsedTime()
   renderer.render(scene, camera)
+  // setTimeout(10000)
+  // console.log(clock.getElapsedTime())
 }
 // 导出方法
 export default {

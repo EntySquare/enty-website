@@ -1,31 +1,36 @@
 <template>
   <div style="overflow-x: hidden;">
-    <div class="container" style="background-color: black">
-      <div id="netWave" style="position: relative;  left: 0; width: 100%; height:0px;top: -300px"></div>
+    <div class="container" style="background-color: #000000;height: 100vh">
+      <div id="netWave" style="position: relative;  left: 0; width: 100%; height:0px;top: 0vh;"></div>
       <el-row :gutter="10" align="middle" justify="center">
-        <!--        <canvas style="height: 100%;width: 100%;position:absolute;left:0px;top:0px;z-index:-1;"></canvas>-->
-        <!--        <animationBall></animationBall>-->
-        <el-col :xs="1" :sm="1" :md="2" :lg="4" :xl="4">
-          <div style="min-height: 36px;"></div>
-        </el-col>
-        <el-col :xs="22" :sm="22" :md="20" :lg="16" :xl="16" style="height: 800px">
-          <div class="hidden-md-and-down" style="font-size: 24px;;font-weight: 300;color: #000000;margin-top: 100px">
-          </div>
-          <div style="height: 100px"></div>
+        <el-col :xs="{span:22,push:1}" :sm="{span:22,push:1}" :md="{span:22,push:1}" :lg="{span:22,push:1}"
+                :xl="{span:22,push:1}" style="height: 800px">
+          <div class="hidden-md-and-down" style="height: 20vh"></div>
+          <div style="height: 10vh"></div>
           <div class="title-text1" style="color: #FFFFFF;">EntySquare x Arweave</div>
-          <div style="margin: 57px 0;" class="title-text-color"><span>全球唯一领先的</span> <span style="white-space: nowrap">Arweave算法提供商</span>
+          <div style="height: 50px"></div>
+          <span style="" class="title-text-color2">
+            <span>全球唯一</span>
+            <span style="white-space: nowrap">领先的Arweave</span>
+            <span style="white-space: nowrap">算法提供商</span>
+          </span>
+          <div style="height: 100px"></div>
+          <div class="title-text2" style="color: #E2E2EC">EntySquare即将成为Arweave
+            <p></p>
+
+            <span style="white-space: nowrap">第一大</span>
+            <span style="white-space: nowrap">矿池和算力</span>
           </div>
-          <div class="title-text2" style="color: #D1D1D1">EntySquare即将成为Arweave</div>
-          <div class="title-text2" style="color: #D1D1D1">第一大矿池和算力</div>
-        </el-col>
-        <el-col :xs="1" :sm="1" :md="2" :lg="4" :xl="4">
-          <div style="min-height: 36px;"></div>
+          <!--          <div class="title-text2" style="color: #D1D1D1">矿池和算力</div>-->
         </el-col>
       </el-row>
+      <!--      <div class="hidden-md-and-down" style="height: 100px"></div>-->
     </div>
-
+    <img
+      src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/ball_002.png"
+      style="height: auto;width: 70vw;min-width:700px ; position: absolute;z-index: 2; margin: 111px 0px 13px 5vw"
+    />
     <div class="container" style="background-color: black">
-      <div style="height: 50px"></div>
       <div class="hidden-lg-and-up" style="float:left;width: 100%">
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:12,push:2}"
                 :xl="{span:8,push:4}" style="text-align: left;">
@@ -49,13 +54,13 @@
           <div style="height: 10px"></div>
           <div style="font-weight: 400;color: rgba(255, 255, 255, 0.6);font-size: 24px;">高效率</div>
           <div style="height: 10px"></div>
-          <div style="text-align: left" class="title-text-color">
+          <span style="text-align: left" class="title-text-color">
             <span>EntySquare</span>
             <span style="white-space: nowrap">比官方单台效率</span>
             <span style="white-space: nowrap">提升1.5X</span>
-          </div>
+          </span>
           <div style="height: 50px"></div>
-          <div style="font-size: 32px;font-weight: 400;color: #DCDCDC;">我们让每个人都可以参与到挖矿中。</div>
+          <div style="font-size: 24px;font-weight: 400;color: #DCDCDC;">我们让每个人都可以参与到挖矿中。</div>
           <div style="height: 5px"></div>
           <div style="color: #DCDCDC;font-size: 20px;">Entysquare是全球唯一领先的Arweave算法提供商，我们将开展高效加密货币挖矿所需的所有关键因素。
             从构建分布式计算+分布式存储的技术，到为用户提供简化的挖矿系统——我们的用户能够简单、智能、快速地获取AR代币。
@@ -82,10 +87,10 @@
           <div style="height: 10px"></div>
           <div style="font-weight: 400;color: rgba(255, 255, 255, 0.6);font-size: 24px;">革命性挖矿技术</div>
           <div style="height: 10px"></div>
-          <div style="text-align: left" class="title-text-color">
+          <span style="text-align: left" class="title-text-color">
             <span>首创分布式计算</span>
             <span style="white-space: nowrap">+分布式存储</span>
-          </div>
+          </span>
           <div style="height: 50px"></div>
           <div style="color: #DCDCDC;font-size: 20px;">
             EntySquare突破官方挖矿方式，通过对存储集群方式复制存储尽可能多的数据，促进了数据的存储和分享效率，同时具有更佳的可扩展性架构，并通过RSA密码学累加器降低了对存储的需求。
@@ -97,7 +102,7 @@
           <div class="hidden-sm-and-down" style="height: 60px"></div>
           <div class="hidden-md-and-down">
             <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/ar_Group_1313.png"
-                 style="width: 100%;height: auto;max-width: 300px">
+                 style="width: 100%;height: auto;max-width: 300px;">
           </div>
         </el-col>
       </el-row>
@@ -109,29 +114,34 @@
         <el-col :xs="{span:22,push:1}" :sm="{span:20,push:4}" :md="{span:20,push:4}" :lg="{span:20,push:2}"
                 :xl="{span:20,push:4}" style="">
           <div style="color: #DCDCDC;font-size: 20px;text-align: left">挖矿优势</div>
-          <div style="text-align: left" class="title-text-color">
+          <div style="text-align: left">
+           <span style="text-align: left" class="title-text-color">
             <span>极速、</span>
             <span style="white-space: nowrap">可扩展、</span>
             <span style="white-space: nowrap">集群化挖矿</span>
+          </span>
           </div>
         </el-col>
       </el-row>
     </div>
-
+    <img
+      src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/ball_002.png"
+      style="height: auto;width: 70vw;min-width:700px ; position: absolute;z-index: 2; margin: -387px 0px 0px -80vw;"
+    />
     <div style="height: 50px;background-color: black"></div>
     <div style="background-color: black;width: 100%;">
       <el-row :gutter="10">
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:6,push:2}"
                 :xl="{span:4,push:4}" style="">
           <div
-            style="background: #0F0F0F;border-radius: 40px 40px 40px 40px;opacity: 1;border: 1px solid #000000;text-align: left;padding: 56px">
+            style="background: rgb(34, 34, 34);border-radius: 40px 40px 40px 40px;opacity: 1;border: 1px solid #000000;text-align: left;padding: 56px;position: absolute;z-index: 3;">
             <div style="height: 22px"></div>
             <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png"
                  style="height: 90px;width: auto">
             <div style="height: 50px"></div>
             <div style="font-size: 32px;font-weight: 500;color: #FFFFFF;">可扩展性</div>
             <div style="height: 24px"></div>
-            <div style="font-size: 20px;font-weight: 400;color: #DCDCDC;">
+            <div style="font-size: 20px;font-weight: 400;color: #DCDCDC;height: 180px">
               EntySquare具备高吞吐量的分布式计算和分布式存储技术，矿工们仅需存储部分历史区块，就可以立即开始挖矿，同时具有绝佳的可扩展性架构。
             </div>
           </div>
@@ -140,15 +150,16 @@
 
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:6,push:3}"
                 :xl="{span:4,push:6}" style="">
+          <div style="height: 530px;background-color: black" class="hidden-lg-and-up"> xxxx</div>
           <div
-            style="background: #0F0F0F;border-radius: 40px 40px 40px 40px;opacity: 1;border: 1px solid #000000;text-align: left;padding: 56px">
+            style="background: rgb(34, 34, 34);border-radius: 40px 40px 40px 40px;opacity: 1;border: 1px solid #000000;text-align: left;padding: 56px;">
             <div style="height: 22px"></div>
             <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png"
                  style="height: 90px;width: auto">
             <div style="height: 50px"></div>
             <div style="font-size: 32px;font-weight: 500;color: #FFFFFF;">创新的算法</div>
             <div style="height: 24px"></div>
-            <div style="font-size: 20px;font-weight: 400;color: #DCDCDC;">
+            <div style="font-size: 20px;font-weight: 400;color: #DCDCDC;height: 180px">
               通过我们的算法从而提高整个网络中的有效数据，扩大网络规模，加入集群，降低了单台的门槛的同时大大提升了矿池算力。
             </div>
           </div>
@@ -158,14 +169,14 @@
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:6,push:4}"
                 :xl="{span:4,push:8}" style="">
           <div
-            style="background: #0F0F0F;border-radius: 40px 40px 40px 40px;opacity: 1;border: 1px solid #000000;text-align: left;padding: 56px">
+            style="background: rgb(34, 34, 34);border-radius: 40px 40px 40px 40px;opacity: 1;border: 1px solid #000000;text-align: left;padding: 56px">
             <div style="height: 22px"></div>
             <img src="https://entysquare.oss-cn-shenzhen.aliyuncs.com/assets/doubleSphere.png"
                  style="height: 90px;width: auto">
             <div style="height: 50px"></div>
             <div style="font-size: 32px;font-weight: 500;color: #FFFFFF;">低门槛</div>
             <div style="height: 24px"></div>
-            <div style="font-size: 20px;font-weight: 400;color: #DCDCDC;">
+            <div style="font-size: 20px;font-weight: 400;color: #DCDCDC;height: 180px">
               突破需要高性能 GPU的模式，发挥极致性能，在科学计算表现中挖矿效率能比官方单台效率提高 1.5 倍。具有高并行、高吞吐、低时延等特点
             </div>
           </div>
@@ -183,8 +194,10 @@
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:20,push:2}"
                 :xl="{span:16,push:4}" style="">
           <div style="text-align: left" class="title-text-color">
-            <span>我们使Arweave</span>
+            <span class="title-text-color">
+              <span>我们使Arweave</span>
             <span style="white-space: nowrap"> 挖矿变得容易</span>
+            </span>
           </div>
           <div style="height: 60px"></div>
           <div style="font-size: 20px;font-weight: 400;color: #DCDCDC;text-align: left;">现在要有竞争力地挖矿，就必须在设施中投入大量资源、时间和精力。
@@ -199,8 +212,8 @@
       <el-row :gutter="10">
         <el-col :xs="{span:22,push:1}" :sm="{span:16,push:4}" :md="{span:16,push:4}" :lg="{span:20,push:2}"
                 :xl="{span:16,push:4}" style="">
-          <div style="text-align: left" class="title-text-color">
-            <span>常见问题</span>
+          <div style="text-align: left">
+            <span class="title-text-color">常见问题</span>
           </div>
         </el-col>
       </el-row>
@@ -246,9 +259,10 @@
 import animationBall from './animationBall'
 import wave from '../assets/js/wave.js'
 import netWave from '../assets/js/net_wave.js'
+
 document.body.scrollTop = document.documentElement.scrollTop = 0
 export default {
-  name: 'coinMining',
+  name: 'arCoin',
   mounted () {
     window.scroll(0, 0) // 页面加载置顶
     document.body.scrollTop = document.documentElement.scrollTop = 0
@@ -283,10 +297,23 @@ export default {
   .title-text-color {
     font-size: 72px;
     font-weight: 500;
+    line-height: 88px;
+    color: #00EAC4;
+    /*text-align: center;*/
+    /*background: linear-gradient(90deg, #00EAC4 17%, #23BFCA 43%, #94469B 85%);*/
+    background: linear-gradient(to right, #00EAC4,#23BFCA,#94469B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .title-text-color2 {
+    font-size: 72px;
+    font-weight: 700;
     color: #00EAC4;
     line-height: 72px;
     text-align: center;
-    background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);
+    /*background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);*/
+    background: linear-gradient(to right, #00EAC4,#23BFCA,#94469B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -315,9 +342,22 @@ export default {
     font-size: 68px;
     font-weight: 500;
     color: #00EAC4;
+    line-height: 88px;
+    text-align: center;
+    /*background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);*/
+    background: linear-gradient(to right, #00EAC4,#23BFCA,#94469B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .title-text-color2 {
+    font-size: 68px;
+    font-weight: 500;
+    color: #00EAC4;
     line-height: 68px;
     text-align: center;
-    background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);
+    /*background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);*/
+    background: linear-gradient(to right, #00EAC4,#23BFCA,#94469B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -345,26 +385,39 @@ export default {
     font-size: 38px;
     font-weight: 500;
     color: #00EAC4;
-    line-height: 72px;
-    background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);
+    line-height: 52px;
+    /*background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);*/
+    background: linear-gradient(to right, #00EAC4,#23BFCA,#94469B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+
+  .title-text-color2 {
+    font-size: 48px;
+    font-weight: 500;
+    color: #00EAC4;
+    line-height: 62px;
+    /*background: linear-gradient(90deg, #00EAC4 0%, #23BFCA 29%, #94469B 100%);*/
+    background: linear-gradient(to right, #00EAC4,#23BFCA,#94469B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
   }
 
   .title-text1 {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 400;
     color: #000000;
     line-height: 48px;
     text-align: center;
   }
 
   .title-text2 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 300;
     color: #000000;
-    line-height: 45px;
+    line-height: 15px;
     text-align: center;
     margin: 24px 0;
   }

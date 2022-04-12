@@ -129,8 +129,10 @@
           <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
                   :xl="{span: 2, push: 4}">
             <div class="bodyTitle2">服务</div>
-            <div class="bodyTitle3">我们所做的</div>
-            <div class="bodyTitle4">打造商业化<br/>智能合约</div>
+            <router-link to="/arCoin">
+              <div class="bodyTitle3">我们所做的</div>
+              <div class="bodyTitle4" >全球领先的<br/>Arweave算法</div>
+            </router-link>
           </el-col>
         </div>
       </el-row>
@@ -146,7 +148,8 @@
       <el-row>
         <el-col :xs="{span: 20, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 12, push: 6}" :lg="{span: 2, push: 2}"
                 :xl="{span: 12, push: 7}">
-          <div class="bodyText1">EntySquare网络正在使区块链应用程序变得通用，从而提供无与伦比的用户覆盖率和使用率。EntySquare分散且可持续发展，旨在为所有商业创造价值。</div>
+<!--          <div class="bodyText1">EntySquare网络正在使区块链应用程序变得通用，从而提供无与伦比的用户覆盖率和使用率。EntySquare分散且可持续发展，旨在为所有商业创造价值。</div>-->
+          <div class="bodyText1">我们使Arweave 挖矿变得容易 EntySquare 正在为 Arweave 提供快速的算法支持</div>
         </el-col>
       </el-row>
       <el-row class="section">
