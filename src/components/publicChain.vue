@@ -4,8 +4,9 @@
     <el-row :gutter="10">
       <el-col style="height: 800px;text-align:center;" :xs="{span: '22',offset:'1'}" :sm="{span: '20',offset:'2'}"
               :md="{span: '18',offset:'3'}" :lg="{span: '18',offset:'3'}" :xl="{span: '16',offset:'4'}">
-        <canvas id="canvas-ball"
-                style="height: 800px;width: 100%;position:absolute;left:0px;top:0px;z-index:-1;"></canvas>
+<!--        <canvas id="canvas-ball"-->
+<!--                style="height: 800px;width: 100%;position:absolute;left:0px;top:0px;z-index:-1;"></canvas>-->
+        <div id="js-metaballs" class="hero__canvas"></div>
         <div style="height: 20%"></div>
         <div style="font-size: 24px;;font-weight: 300;color: #000000;">
           敬请期待
@@ -353,9 +354,12 @@
     <div style="height: 100px"></div>
   </div>
 </template>
+<!--<script  type="application/javascript" src="../assets/js/metaball2.js"></script>-->
 
 <script>
-import('../assets/js/metaBall.js')
+// import('../assets/js/metaBall.js')
+import App from '.././App'
+import('../assets/js/metaball2.js')
 window.scroll(0, 0) // 页面加载置顶
 document.body.scrollTop = document.documentElement.scrollTop = 0
 window.onload = function () {
@@ -364,6 +368,9 @@ window.onload = function () {
 window.onresize = function () {
   Adaptation()
 }
+window.addEventListener('DOMContentLoaded', function () {
+  App('home')
+})
 
 function Adaptation () {
   let docWidth = document.body.clientWidth.valueOf()
@@ -391,17 +398,17 @@ export default {
     window.scroll(0, 0) // 页面加载置顶
     document.body.scrollTop = document.documentElement.scrollTop = 0
   },
-  destroyed () {
-    let c = document.getElementById('canvas-ball')
-    // 获取WebGL绘图上下文
-    let gl = c.getContext('webgl', {failIfMajorPerformanceCaveat: true, antialias: true})
-    // 设置背景颜色
-    // gl.clearColor(0.5, 0.5, 0.5, 1)
-    // 清空canvas
-    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
-    gl.deleteBuffer(this.vbo)
-    gl.deleteProgram(this.programInfo)
-  },
+  // destroyed () {
+  //   let c = document.getElementById('canvas-ball')
+  //   // 获取WebGL绘图上下文
+  //   let gl = c.getContext('webgl', {failIfMajorPerformanceCaveat: true, antialias: true})
+  //   // 设置背景颜色
+  //   // gl.clearColor(0.5, 0.5, 0.5, 1)
+  //   // 清空canvas
+  //   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
+  //   gl.deleteBuffer(this.vbo)
+  //   gl.deleteProgram(this.programInfo)
+  // },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
@@ -421,7 +428,31 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.hero.js-reveal .hero__asset, .hero.js-reveal .hero__canvas, .js-lazy, .map.js-reveal .map__item {
+  opacity: 0;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05)
+}
+.hero.js-reveal.is-visible .hero__asset, .hero.js-reveal.is-visible .hero__canvas {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  transition: opacity .3s ease-out, transform .3s cubic-bezier(.25, .46, .45, .94), -webkit-transform .3s cubic-bezier(.25, .46, .45, .94)
+}
+box, .browser__nav, .hero__canvas, .map, .parallax, .section {
+  overflow: hidden
+}
+.box__cover, .box__inner, .hero__canvas {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0
+}
+.hero__canvas {
+  height: 100%
+}
 /*.floatingBalloonPng {*/
 /*  background-image: url('/src/assets/floatingBalloon.png') center center no-repeat;*/
 /*}*/

@@ -7,7 +7,8 @@
           <el-col :xs="{span: 2, push: 2}" :sm="{span: 2, push: 2}" :md="{span: 2, push: 2}" :lg="{span: 2, push: 2}"
                   :xl="{span: 2, push: 1}">
             <router-link to="/">
-            <el-image :src="require('../assets/entyLogo.png')" style="height: 48px; width: 235px;"></el-image>
+<!--            <el-image :src="require('../assets/entyLogo.png')" style="height: 48px; width: 235px;"></el-image>-->
+<!--            <el-image :src="../assets/entyLogo.png" style="height: 48px; width: 235px;"></el-image>-->
             </router-link>
           </el-col>
           <el-col class="is-justify-center" :span="8" :push="6">

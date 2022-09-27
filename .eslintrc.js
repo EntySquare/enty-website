@@ -1,29 +1,53 @@
-// https://eslint.org/docs/user-guide/configuring
+const path = require("path");
 
 module.exports = {
   root: true,
+  parser: "vue-eslint-parser",
   parserOptions: {
-    parser: 'babel-eslint'
+    // Parser that checks the content of the <script> tag
+    // parser: 'babel/eslint-parser',
+    sourceType: "module",
+    ecmaVersion: 2020,
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   env: {
     browser: true,
+    node: true,
+    "vue/setup-compiler-macros": true,
   },
   extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential', 
-    // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-    'standard'
+    // Airbnb JavaScript Style Guide https://github.com/airbnb/javascript
+    "airbnb-base",
+    "plugin:import/recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:prettier/recommended",
   ],
-  // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
-  // add your custom rules here
   rules: {
-    // allow async-await
-    'generator-star-spacing': 'off',
-    // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
-  }
-}
+    "prettier/prettier": 1,
+    // Vue: Recommended rules to be closed or modify
+    "vue/require-default-prop": 0,
+    "vue/singleline-html-element-content-newline": 0,
+    "vue/max-attributes-per-line": 0,
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    // Vue: Add extra rules
+    "vue/custom-event-name-casing": [2, "camelCase"],
+    "vue/no-v-text": 1,
+    "vue/padding-line-between-blocks": 1,
+    "vue/require-direct-export": 1,
+    "vue/multi-word-component-names": 0,
+    "import/extensions": [
+      2,
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+      },
+    ],
+    "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
+    "no-param-reassign": 0,
+    "prefer-regex-literals": 0,
+    "import/no-extraneous-dependencies": 0,
+  },
+};

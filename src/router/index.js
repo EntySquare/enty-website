@@ -1,15 +1,10 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+// import Router from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import CommonLayout from '../layouts/CommonLayout'
-Vue.use(Router)
 
-export default new Router({
+const router = createRouter({
+  history: createWebHistory(),
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'HelloWorld',
-    //   component: HelloWorld
-    // },
     {
       path: '/',
       name: 'Home',
@@ -19,11 +14,6 @@ export default new Router({
       path: '/',
       component: CommonLayout,
       children: [
-        // {
-        //   path: '/',
-        //   name: 'Home',
-        //   component: () => import('../components/home.vue')
-        // },
         {
           path: '/publicChain',
           name: 'publicChain',
@@ -43,3 +33,5 @@ export default new Router({
     }
   ]
 })
+
+export default router;
