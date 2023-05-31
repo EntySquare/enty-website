@@ -36,6 +36,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      // 'metaball': resolve('./src/assets/js/metaball2.js'),
     }
   },
   module: {

@@ -1,5 +1,5 @@
 <template>
-  <div style="overflow-x: hidden;">
+  <div style="overflow-x: hidden;position: relative; width: 100% ; height: 100%;">
     <div class="container" style="background-color: #000000;height: 100vh">
       <div id="netWave" style="position: relative;  left: 0; width: 100%; height:0px;top: 0vh;"></div>
       <el-row :gutter="10" align="middle" justify="center">
@@ -9,15 +9,15 @@
           <div style="height: 10vh"></div>
           <div class="title-text1" style="color: #FFFFFF;">EntySquare x Arweave</div>
           <div style="height: 50px"></div>
-          <span style="" class="title-text-color2">
+          <div>
+            <span style="" class="title-text-color2">
             <span>全球唯一</span>
             <span style="white-space: nowrap">领先的Arweave</span>
             <span style="white-space: nowrap">算法提供商</span>
           </span>
+          </div>
           <div style="height: 100px"></div>
           <div class="title-text2" style="color: #E2E2EC">EntySquare即将成为Arweave
-            <p></p>
-
             <span style="white-space: nowrap">第一大</span>
             <span style="white-space: nowrap">矿池和算力</span>
           </div>
@@ -417,7 +417,7 @@ export default {
     font-size: 28px;
     font-weight: 300;
     color: #000000;
-    line-height: 15px;
+    line-height: 35px;
     text-align: center;
     margin: 24px 0;
   }

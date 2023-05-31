@@ -1,4 +1,3 @@
-
 // set inner height and width based on screen size
 import * as THREE from 'three' // npm install three 后，将three引用进js（注意版本，three.js版本跨度大，很多方法可能不兼容，需要留意，后续会提到）
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
@@ -121,10 +120,8 @@ const vshader = `
         float noiseFreq = 3.5;
         float noiseAmp = .15;
 
-
-        vec3 noisePos = vec3(pos.x * noiseFreq + u_time, pos.y, pos.z);
+        vec3 noisePos = vec3(pos.x * noiseFreq + u_time / 4.0, pos.y, pos.z);
         pos.z += snoise(noisePos) * noiseAmp;
-
         gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.);
     }
 
@@ -203,17 +200,13 @@ function animate () {
   requestAnimationFrame(animate)
   render()
 }
+
 // 动态的逻辑
 function render () {
-  // setTimeout(() => {
-  //   uniforms.u_time.value = clock.getElapsedTime()
-  //   renderer.render(scene, camera)
-  // }, 5000)
   uniforms.u_time.value = clock.getElapsedTime()
   renderer.render(scene, camera)
-  // setTimeout(10000)
-  // console.log(clock.getElapsedTime())
 }
+
 // 导出方法
 export default {
   init,
